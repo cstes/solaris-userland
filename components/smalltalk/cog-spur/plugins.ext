@@ -1,0 +1,20 @@
+# Copied, perhaps edited, from ../../src/examplePlugins.ext
+EXTERNAL_PLUGINS = \
+MIDIPlugin \
+B3DAcceleratorPlugin \
+FileAttributesPlugin \
+Squeak3D \
+SqueakFFIPrims \
+SqueakSSL \
+LocalePlugin \
+# compiles on Solaris 11.3 but not 11.4 currently due to include problem
+# UnicodePlugin \
+UnixOSProcessPlugin \
+UUIDPlugin \
+ImmX11Plugin \
+XDisplayControlPlugin \
+# Cuis specific addition
+VectorEnginePlugin \
+DESPlugin \
+MD5Plugin \
+SHA2Plugin \

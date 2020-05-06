@@ -1,0 +1,1001 @@
+
+Test Runner in environment Smalltalk
+BitmapStreamTests>>#testMatrixTransform2x3WithImageSegment
+BitmapStreamTests>>#testShortIntegerArrayWithImageSegment
+BitmapStreamTests>>#testShortRunArrayWithImageSegment
+BitmapStreamTests>>#testWordArrayWithImageSegment
+ClosureCompilerTest>>#testSourceRangeAccessForInjectInto
+
+BitmapStreamTests>>#testMatrixTransform2x3WithImageSegment
+BitmapStreamTests>>#testShortIntegerArrayWithImageSegment
+BitmapStreamTests>>#testShortRunArrayWithImageSegment
+BitmapStreamTests>>#testWordArrayWithImageSegment
+ClosureCompilerTest>>#testSourceRangeAccessForInjectInto
+
+BasicBehaviorClassMetaclassTest>>#testClassDescriptionAllSubInstances
+PackageDependencyTest>>#testMorphic
+PackageDependencyTest>>#testMultilingual
+PackageDependencyTest>>#testNetwork
+PackageDependencyTest>>#testPreferenceBrowser
+PackageDependencyTest>>#testProtocols
+PackageDependencyTest>>#testShoutCore
+ReleaseTest>>#testUndeclared
+ST80PackageDependencyTest>>#testST80
+
+BasicBehaviorClassMetaclassTest>>#testClassDescriptionAllSubInstances
+PackageDependencyTest>>#testMorphic
+PackageDependencyTest>>#testMultilingual
+PackageDependencyTest>>#testNetwork
+PackageDependencyTest>>#testPreferenceBrowser
+PackageDependencyTest>>#testProtocols
+PackageDependencyTest>>#testShoutCore
+ReleaseTest>>#testUndeclared
+ST80PackageDependencyTest>>#testST80
+
+4769 run in 0:00:03:35.417, 4708 passes, 47 expected failures, 9 failures, 5 errors, 0 unexpected passes
+TestCase
+  AliasTest (11 tests, < 1 ms)
+  AllocationTest (3 tests, 2 ms)
+  AppRegistryTest (1 tests, < 1 ms)
+  ArbitraryObjectSocketTestCase (1 tests, 83 ms)
+  ArrayLiteralTest (2 tests, 5 ms)
+  Ascii85ConverterTest (11 tests, 1 ms)
+  BMPReadWriterTest (5 tests, 1 ms)
+  BagTest (13 tests, < 1 ms)
+  BalloonFontTest (2 tests, 1 ms)
+  Base64MimeConverterTest (4 tests, < 1 ms)
+  BasicBehaviorClassMetaclassTest (10 tests, 14 ms)
+  BasicTypeTest (1 tests, < 1 ms)
+  BecomeTest (7 tests, 7 ms)
+  BehaviorTest (9 tests, 58 ms)
+  BindingPolicyTest (8 tests, < 1 ms)
+  BitBltClipBugs (9 tests, < 1 ms)
+  BitSetTest (7 tests, 2 ms)
+  BitmapBugz (2 tests, < 1 ms)
+  BitmapStreamTests (32 tests, 443 ms)
+  BlockClosureTest (29 tests, 11 ms)
+  BlockLocalTemporariesRemovalTest (3 tests, 8 ms)
+  BorderedMorphTests (5 tests, 56 ms)
+  BrowseTest (8 tests, 184 ms)
+  BrowserHierarchicalListTest (3 tests, < 1 ms)
+  BrowserTest (64 tests, 358 ms)
+  ByteEncoderTest (1 tests, 2 ms)
+  CaseErrorTest (2 tests)
+  CategorizerTest (14 tests, 14 ms)
+  ChainedSortFunctionTest (2 tests, < 1 ms)
+  ChangeSetClassChangesTest (5 tests, 2 secs)
+  CharacterScannerTest (7 tests, < 1 ms)
+  CharacterSetTest (13 tests, < 1 ms)
+  CircleMorphBugs (1 tests, < 1 ms)
+  ClassAPIHelpBuilderTest (2 tests, 34 ms)
+  ClassBindingTest (14 tests, < 1 ms)
+  ClassFactoryForTestCaseTest (7 tests, 3 secs)
+  ClassRemovalTest (2 tests, 1 secs)
+  ClassRenameFixTest (1 tests, 220 ms)
+  ClassTest (4 tests, 952 ms)
+  ClassTestCase
+    ArrayTest (13 tests, 4 ms)
+    AssociationTest (7 tests, 1 ms)
+    BitBltTest (15 tests, 296 ms)
+    BooleanTest (6 tests, < 1 ms)
+    ByteArrayTest (11 tests, 424 ms)
+    CharacterSetComplementTest (8 tests, < 1 ms)
+    CharacterTest (11 tests, 11 ms)
+    ClassBuilderTest (19 tests, 10 secs)
+    ClassDescriptionTest (5 tests, 1 ms)
+    ColorTest (14 tests, 4 ms)
+    CompiledMethodTest (20 tests, 931 ms)
+    DateAndTimeTest (26 tests, 1 secs)
+    DateTest (53 tests, 2 ms)
+    DependentsArrayTest (7 tests, 1 ms)
+    DoubleByteArrayTest (11 tests, 2 ms)
+    DoubleWordArrayTest (11 tests, < 1 ms)
+    DurationTest (47 tests, 502 ms)
+    EventManagerTest (24 tests, < 1 ms)
+    ExtendedNumberParserTest (12 tests, < 1 ms)
+    FalseTest (17 tests, < 1 ms)
+    FileDirectoryTest (17 tests, 5 ms)
+    FileListTest (10 tests, 33 ms)
+    FileStreamTest (11 tests, 4 ms)
+    FileUrlTest (5 tests, 1 ms)
+    FloatArrayTest (8 tests, < 1 ms)
+    FloatCollectionTest (6 tests, < 1 ms)
+    FloatTest (89 tests, 92 ms)
+    FormTest (5 tests, 1 ms)
+    FractionTest (33 tests, 15 ms)
+    GenericUrlTest (5 tests, < 1 ms)
+    GradientFillStyleTest (5 tests, 2 ms)
+    HeapTest (22 tests, 215 ms)
+    HierarchicalUrlTest (5 tests, < 1 ms)
+    HttpUrlTest (5 tests, < 1 ms)
+    InstructionPrinterTest (5 tests, 9 ms)
+    IntegerArrayTest (9 tests, < 1 ms)
+    IntervalTest (41 tests, 1 ms)
+    KeyedSetTest (8 tests, < 1 ms)
+    LargeNegativeIntegerTest (12 tests, < 1 ms)
+    LargePositiveIntegerTest (21 tests, 246 ms)
+    LinkedListTest (239 tests, 1 ms)
+    MIMEDocumentTest (10 tests, 4 ms)
+    MatrixTest (11 tests, < 1 ms)
+    MethodReferenceTest (10 tests, 4 secs)
+    MonthTest (13 tests, < 1 ms)
+    MutexTest (11 tests, 317 ms)
+    NumberTest (16 tests, 1 ms)
+    ObjectTest (18 tests, 5 ms)
+    OrderedCollectionTest (43 tests, < 1 ms)
+    OrderedDictionaryTest (19 tests, < 1 ms)
+    PasteUpMorphTest (8 tests, 4 ms)
+    PointTest (21 tests, 27 ms)
+    PrimCallControllerAbstractTest
+      PCCByCompilationTest (42 tests, 626 ms)
+      PCCByLiteralsTest (42 tests, 295 ms)
+    ProcessTest (9 tests, < 1 ms)
+    ProtoObjectTest (10 tests, < 1 ms)
+    RandomTest (10 tests, 1 secs)
+    ReadStreamTest (49 tests, < 1 ms)
+    ReadWriteStreamTest (9 tests, < 1 ms)
+    ScaledDecimalTest (34 tests, 73 ms)
+    ScheduleTest (13 tests, 2 ms)
+    SecureHashAlgorithmTest (8 tests, 8 ms)
+    SemaphoreTest (11 tests, 265 ms)
+    SequenceableCollectionTest (29 tests, 3 ms)
+    SetTest (24 tests, 1 ms)
+    SimpleSwitchMorphTest (7 tests, < 1 ms)
+    SmallIntegerTest (14 tests, 4 ms)
+    SocketStreamTest (34 tests, 4 secs)
+    SqNumberParserTest (15 tests, 8 ms)
+    StopwatchTest (13 tests, 3 secs)
+    StringTest (83 tests, 438 ms)
+    SymbolTest (10 tests, < 1 ms)
+    TextMorphTest (5 tests, 1 ms)
+    TextTest (18 tests, < 1 ms)
+    TimeStampTest (27 tests, 2 ms)
+    TimeTest (48 tests, < 1 ms)
+    TimespanTest (64 tests, 3 ms)
+    TrueTest (17 tests, < 1 ms)
+    UndefinedObjectTest (20 tests, 15 ms)
+    UrlTest (25 tests, 1 ms)
+    VersionNumberTest (13 tests, < 1 ms)
+    WeakIdentityDictionaryTest (5 tests, 1 ms)
+    WeakIdentityKeyDictionaryTest (6 tests, 1 ms)
+    WeakKeyDictionaryTest (6 tests, 1 ms)
+    WeakMessageSendTest (9 tests, < 1 ms)
+    WeakRegistryTest (11 tests, 207 ms)
+    WeakSetTest (12 tests, 3 ms)
+    WeekTest (10 tests, < 1 ms)
+    WideStringTest (20 tests, 548 ms)
+    WordArrayTest (11 tests, < 1 ms)
+    WorldStateTest (5 tests, 258 ms)
+    WriteStreamTest (33 tests, 1 ms)
+    XMLParserTest (9 tests, 1 ms)
+    YearTest (6 tests, < 1 ms)
+  ClassVarScopeTest (10 tests, 76 ms)
+  ClipboardTest (2 tests, 2 ms)
+  ClosureCompilerTest (19 tests, 472 ms)
+    MethodHighlightingTests (1 tests, 7 ms)
+  ClosureTests (19 tests, < 1 ms)
+  CogVMBaseImageTests (1 tests, 5 ms)
+  CollectionTest (32 tests, 1 ms)
+  CompiledMethodTrailerTest (8 tests, 36 ms)
+  CompilerExceptionsTest (5 tests, 3 ms)
+  CompilerNotifyingTest (39 tests, 295 ms)
+    CompilerSyntaxErrorNotifyingTest (41 tests, 5 ms)
+  CompilerTest (15 tests, 15 secs)
+  ComplexTest (35 tests, 1 ms)
+  ContextCompilationTest (1 tests, < 1 ms)
+  DataStreamTest (5 tests, < 1 ms)
+    ReferenceStreamTest (5 tests, 1 ms)
+      SmartRefStreamTest (5 tests, 51 ms)
+  DateAndTimeEpochTest (67 tests, < 1 ms)
+  DateAndTimeLeapTest (46 tests, < 1 ms)
+  DateAndTimeReferenceStreamTest (9 tests, < 1 ms)
+  DebuggerExtensionsTest (13 tests, 1 ms)
+  DebuggerTests (15 tests, 2 secs)
+  DebuggerUnwindBug (2 tests, 93 ms)
+  DelayTest (3 tests, 6 ms)
+  DependencyBrowserTest (7 tests, 231 ms)
+  DictionaryTest (35 tests, 69 ms)
+  DosFileDirectoryTests (13 tests, < 1 ms)
+  EPSCanvasTest (1 tests, 3 ms)
+  EnvironmentTest (59 tests, 1 secs)
+  EtoysStringExtensionTest (3 tests, < 1 ms)
+  ExceptionTests (27 tests, 1 ms)
+  ExpandedSourceFileArrayTest (7 tests, 40 ms)
+  FileContentsBrowserTest (2 tests, 629 ms)
+  FileList2ModalDialogsTest (4 tests, 108 ms)
+  FlapTabTests (1 tests, 1 ms)
+  FontTest (7 tests, 7 ms)
+  FormCanvasTest (3 tests, 1 ms)
+  GeneratorTest (13 tests, < 1 ms)
+  GlobalTest (12 tests, < 1 ms)
+  HandBugs (1 tests, < 1 ms)
+  HashAndEqualsTestCase (2 tests, 1 ms)
+    TextAlignmentTest (2 tests, < 1 ms)
+    TextEmphasisTest (4 tests, < 1 ms)
+    TextFontChangeTest (2 tests, < 1 ms)
+    TextFontReferenceTest (2 tests, < 1 ms)
+    TextKernTest (2 tests, < 1 ms)
+    TextLineTest (2 tests, < 1 ms)
+    TextStyleTest (2 tests, < 1 ms)
+  HashTesterTest (1 tests, < 1 ms)
+  HashedCollectionTest (4 tests, 173 ms)
+  HelpBrowserTest (5 tests, 70 ms)
+  HelpIconsTest (1 tests, < 1 ms)
+  HelpTopicListItemWrapperTest (1 tests, < 1 ms)
+  HelpTopicTest (4 tests, < 1 ms)
+  HexTest (4 tests, < 1 ms)
+  HierarchyBrowserTest (6 tests, 6 ms)
+  HtmlReadWriterTest (15 tests, 3 ms)
+  IdentityBagTest (1 tests, < 1 ms)
+  ImageSegmentTest (2 tests, 366 ms)
+  InstVarRefLocatorTest (3 tests, 1 ms)
+  InstallerTest (6 tests, 38 ms)
+  InstallerUrlTest (1 tests, 1 ms)
+  InstructionClientTest (1 tests, 3 ms)
+  IntegerDigitLogicTest (7 tests, 43 ms)
+  IntegerTest (59 tests, 777 ms)
+  IslandVMTweaksTestCase (3 tests, < 1 ms)
+  JPEGReadWriter2Test (1 tests, 2 ms)
+  LangEnvBugs (1 tests, 276 ms)
+  LayoutFrameTest (4 tests, < 1 ms)
+  LiteralRefLocatorTest (2 tests, 40 ms)
+  LocaleTest (3 tests, < 1 ms)
+  LongTestCase
+    BytecodeDecodingTests (2 tests, 2 secs)
+    CompiledMethodComparisonTest (1 tests, 7 secs)
+    DecompilerTests (56 tests, 30 secs)
+      DecompilerTestFailuresCollector
+    LongTestCaseTestUnderTest (1 tests, < 1 ms)
+  LongTestCaseTest (2 tests, < 1 ms)
+  MCDependencySorterTest (7 tests, 1 ms)
+  MCMcmUpdaterTest (5 tests, < 1 ms)
+  MCPTest (3 tests, 3 ms)
+  MCSortingTest (2 tests, 2 ms)
+  MCTestCase
+    MCAncestryTest (4 tests, 4 ms)
+    MCChangeNotificationTest (3 tests, 3 ms)
+    MCClassDefinitionTest (12 tests, 160 ms)
+    MCEnvironmentLoadTest (1 tests, 2 secs)
+    MCFileInTest (1 tests, 2 secs)
+    MCInitializationTest (1 tests, 15 ms)
+    MCMczInstallerTest (2 tests, 615 ms)
+    MCMergingTest (12 tests, 1 ms)
+    MCMethodDefinitionTest (6 tests, 625 ms)
+    MCOrganizationTest (3 tests, < 1 ms)
+    MCPackageTest (1 tests, 2 secs)
+    MCPatchTest (1 tests, 273 ms)
+    MCRepositoryTest
+      MCDictionaryRepositoryTest (5 tests, 91 ms)
+      MCDirectoryRepositoryTest (5 tests, 168 ms)
+    MCScannerTest (6 tests, 1 ms)
+    MCSerializationTest (3 tests, 418 ms)
+    MCSnapshotBrowserTest (13 tests, 155 ms)
+    MCSnapshotTest (2 tests, 216 ms)
+    MCStReaderTest (3 tests, 31 ms)
+    MCStWriterTest (7 tests, 25 ms)
+    MCVersionNameTest (7 tests, 1 ms)
+    MCVersionTest (8 tests, < 1 ms)
+    MCWorkingCopyRenameTest (2 tests, 853 ms)
+    MCWorkingCopyTest (11 tests, 11 secs)
+  MacFileDirectoryTest (3 tests, < 1 ms)
+  MailAddressParserTest (2 tests, 1 ms)
+  MailDateAndTimeTest (2 tests, < 1 ms)
+  MailMessageTest (14 tests, 3 ms)
+  MessageNamesTest (6 tests, 357 ms)
+  MessageSendTest (1 tests, < 1 ms)
+  MessageSetTest (8 tests, 286 ms)
+    MessageTraceTest (1 tests, 71 ms)
+  MessageTest (1 tests, < 1 ms)
+  MethodContextTest (8 tests, 3 ms)
+  MethodPragmaTest (29 tests, 22 ms)
+  MethodPropertiesTest (9 tests, 13 ms)
+  MirrorPrimitiveTests (6 tests, < 1 ms)
+  MonitorTest (4 tests, 2 ms)
+  MorphLayoutTest (4 tests, 5 ms)
+  MorphTest (8 tests, 6 ms)
+    CircleMorphTest (8 tests, 7 ms)
+    MorphBugs (1 tests, < 1 ms)
+    PolygonMorphTest (2 tests, 10 ms)
+  MorphicUIManagerTest (4 tests, 40 secs)
+    StickynessBugz (1 tests, 1 ms)
+  MultiByteFileStreamTest (19 tests, 61 ms)
+  NamePolicyTest
+    AddPrefixNamePolicyTest (2 tests, < 1 ms)
+    AllNamePolicyTest (1 tests, < 1 ms)
+    ExplicitNamePolicyTest (8 tests, < 1 ms)
+    RemovePrefixNamePolicyTest (2 tests, < 1 ms)
+  NumberParsingTest (12 tests, 2 ms)
+  ObjectFinalizerTests (1 tests, 2 ms)
+  OrderedCollectionInspectorTest (1 tests, 22 ms)
+  PNGReadWriterTest (44 tests, 727 ms)
+  PackageDependencyTest (30 tests, 521 ms)
+  PackagePaneBrowserTest (3 tests, 2 ms)
+  ParserEditingTest (3 tests, 3 ms)
+  PluggableMenuItemSpecTests (6 tests, < 1 ms)
+  PluggableTextMorphTest (4 tests, 8 ms)
+  PreferencesTest (12 tests, 19 ms)
+  ProcessSpecificTest (4 tests, 125 ms)
+  ProcessTerminateBug (4 tests, < 1 ms)
+  PromiseTest (26 tests, 55 ms)
+  QFormatMimeConverterTest (4 tests, < 1 ms)
+  QuotedPrintableMimeConverterTest (8 tests, 1 ms)
+  RWBinaryOrTextStreamTest (6 tests, 1 ms)
+  RecentMessagesTest (16 tests, 555 ms)
+  RectangleTest (30 tests, < 1 ms)
+  ReleaseTest (8 tests, 1 secs)
+  RemoteStringTest (2 tests, 1 ms)
+  RenderBugz (5 tests, 1 ms)
+  ResumableTestFailureTestCase (1 tests, < 1 ms)
+  RunArrayTest (15 tests, < 1 ms)
+  RxMatcherTest (175 tests, 1 ms)
+  RxParserTest (20 tests, 6 ms)
+  SHParserST80Test (9 tests, 151 ms)
+  SMDependencyTest (0 tests)
+  SMTPClientTest (1 tests, 1 ms)
+  ST80MenusTest (3 tests, < 1 ms)
+  ST80PackageDependencyTest (1 tests, < 1 ms)
+  SUnitExtensionsTest (19 tests, 306 ms)
+  SUnitTest (19 tests, 9 secs)
+  ScannerTest (1 tests, 5 ms)
+  ScrollPaneTest (12 tests, 16 ms)
+    ScrollPaneLeftBarTest (12 tests, 12 ms)
+    ScrollPaneRetractableBarsTest (12 tests, 13 ms)
+  SetWithNilTest (6 tests, 1 ms)
+  SharedQueue2Test (3 tests, < 1 ms)
+  SimpleTestResourceTestCase (3 tests, < 1 ms)
+  SliderTest (9 tests, < 1 ms)
+    ScrollBarTest (9 tests, 6 ms)
+  SmalltalkImageTest (1 tests, < 1 ms)
+  SocketTest (14 tests, 3 secs)
+  SortFunctionTest (12 tests, < 1 ms)
+  SortedCollectionTest (14 tests, < 1 ms)
+  SqueakMessageCategoriesHelpTest (1 tests, < 1 ms)
+  SqueakSSLTest (13 tests, 1 secs)
+  StackTest (5 tests, < 1 ms)
+  StandardSourceFileArrayTest (6 tests, 17 ms)
+  StringSocketTestCase (3 tests, 128 ms)
+  StringSystemSupportTest (4 tests, < 1 ms)
+  SumBugs (5 tests, < 1 ms)
+  SystemChangeFileTest (22 tests, 12 secs)
+  SystemChangeTestRoot (0 tests)
+    ChangeHooksTest (20 tests, 6 secs)
+    SystemChangeErrorHandlingTest (3 tests, 212 ms)
+    SystemChangeNotifierTest (11 tests, < 1 ms)
+  SystemDictionaryTest (2 tests, < 1 ms)
+  SystemNavigationTest (10 tests, 1 secs)
+  SystemOrganizerTest (2 tests, < 1 ms)
+  SystemVersionTest (1 tests, < 1 ms)
+  SystemWindowTest (1 tests, 4 ms)
+  TableLayoutTest (17 tests, 16 ms)
+  TestIndenting (9 tests, 2 ms)
+  TestObjectsAsMethods (3 tests, 6 ms)
+  TestParagraphFix (4 tests, 3 ms)
+    TestNewParagraphFix (4 tests, < 1 ms)
+  TestSpaceshipOperator (3 tests, < 1 ms)
+  TestURI (48 tests, < 1 ms)
+  TestVMStatistics (1 tests, 2 ms)
+  TestValueWithinFix (6 tests, 812 ms)
+  TextAnchorTest (19 tests, 20 ms)
+  TextAndTextStreamTest (19 tests, < 1 ms)
+  TextAttributesScanningTest (28 tests, 2 ms)
+  TextDiffBuilderTest (15 tests, < 1 ms)
+  TextEditorTest (7 tests, 16 ms)
+  TextLineEndingsTest (9 tests, < 1 ms)
+  ThirtyTwoBitRegisterTest (18 tests, 426 ms)
+  TileMorphTest (4 tests, 56 ms)
+  TimespanDoSpanAYearTest (4 tests, < 1 ms)
+  TimespanDoTest (8 tests, 1 ms)
+  ToolBuilderTests
+    MVCToolBuilderTests (49 tests, 2 secs)
+    MorphicToolBuilderTests (50 tests, 61 ms)
+    SUnitToolBuilderTests (52 tests, 2 secs)
+  TraitsTestCase
+    ClassTraitTest (4 tests, 208 ms)
+    PureBehaviorTest (17 tests, 1 secs)
+    TraitCompositionTest (13 tests, 589 ms)
+    TraitFileOutTest (4 tests, 2 secs)
+    TraitMethodDescriptionTest (4 tests, 864 ms)
+    TraitSystemTest (3 tests, 259 ms)
+    TraitTest (14 tests, 1 secs)
+  UIManagerTest (1 tests, 51 ms)
+  UTF8EdgeCaseTest (14 tests, 10 ms)
+  UTF8TextConverterTest (18 tests, 4 ms)
+  UTFTextConverterWithByteOrderTest
+    UTF16TextConverterTest (3 tests, 5 ms)
+    UTF32TextConverterTest (3 tests, 5 ms)
+  UUIDPrimitivesTest (8 tests, 16 ms)
+  UUIDTest (1 tests, 1 ms)
+  UnderscoreSelectorsTest (57 tests, 91 ms)
+  UnimplementedCallBugz (1 tests, < 1 ms)
+  UnixFileDirectoryTests (1 tests, < 1 ms)
+  UserInputEventTests
+    MorphicEventDispatcherTests (11 tests, 4 ms)
+    MorphicEventFilterTests (9 tests, 5 ms)
+    MorphicEventTests (3 tests, 9 ms)
+  UserInterfaceThemeTest (27 tests, 2 secs)
+  WarningTests (6 tests, < 1 ms)
+  WeakFinalizersTest (0 tests)
+  WeakSetInspectorTest (1 tests, 16 ms)
+  WebClientServerTest (71 tests, 4 secs)
+  WideCharacterSetTest (2 tests, 2 ms)
+  Win32VMTest (1 tests, < 1 ms)
+  WriteBarrierTest (33 tests, 2 ms)
+  YearMonthWeekTest (8 tests, < 1 ms)
+
+TestCase
+  AliasTest (11 tests, < 1 ms)
+  AllocationTest (3 tests, 2 ms)
+  AppRegistryTest (1 tests, < 1 ms)
+  ArbitraryObjectSocketTestCase (1 tests, 83 ms)
+  ArrayLiteralTest (2 tests, 5 ms)
+  Ascii85ConverterTest (11 tests, 1 ms)
+  BMPReadWriterTest (5 tests, 1 ms)
+  BagTest (13 tests, < 1 ms)
+  BalloonFontTest (2 tests, 1 ms)
+  Base64MimeConverterTest (4 tests, < 1 ms)
+  BasicBehaviorClassMetaclassTest (10 tests, 14 ms)
+  BasicTypeTest (1 tests, < 1 ms)
+  BecomeTest (7 tests, 7 ms)
+  BehaviorTest (9 tests, 58 ms)
+  BindingPolicyTest (8 tests, < 1 ms)
+  BitBltClipBugs (9 tests, < 1 ms)
+  BitSetTest (7 tests, 2 ms)
+  BitmapBugz (2 tests, < 1 ms)
+  BitmapStreamTests (32 tests, 443 ms)
+  BlockClosureTest (29 tests, 11 ms)
+  BlockLocalTemporariesRemovalTest (3 tests, 8 ms)
+  BorderedMorphTests (5 tests, 56 ms)
+  BrowseTest (8 tests, 184 ms)
+  BrowserHierarchicalListTest (3 tests, < 1 ms)
+  BrowserTest (64 tests, 358 ms)
+  ByteEncoderTest (1 tests, 2 ms)
+  CaseErrorTest (2 tests)
+  CategorizerTest (14 tests, 14 ms)
+  ChainedSortFunctionTest (2 tests, < 1 ms)
+  ChangeSetClassChangesTest (5 tests, 2 secs)
+  CharacterScannerTest (7 tests, < 1 ms)
+  CharacterSetTest (13 tests, < 1 ms)
+  CircleMorphBugs (1 tests, < 1 ms)
+  ClassAPIHelpBuilderTest (2 tests, 34 ms)
+  ClassBindingTest (14 tests, < 1 ms)
+  ClassFactoryForTestCaseTest (7 tests, 3 secs)
+  ClassRemovalTest (2 tests, 1 secs)
+  ClassRenameFixTest (1 tests, 220 ms)
+  ClassTest (4 tests, 952 ms)
+  ClassTestCase
+    ArrayTest (13 tests, 4 ms)
+    AssociationTest (7 tests, 1 ms)
+    BitBltTest (15 tests, 296 ms)
+    BooleanTest (6 tests, < 1 ms)
+    ByteArrayTest (11 tests, 424 ms)
+    CharacterSetComplementTest (8 tests, < 1 ms)
+    CharacterTest (11 tests, 11 ms)
+    ClassBuilderTest (19 tests, 10 secs)
+    ClassDescriptionTest (5 tests, 1 ms)
+    ColorTest (14 tests, 4 ms)
+    CompiledMethodTest (20 tests, 931 ms)
+    DateAndTimeTest (26 tests, 1 secs)
+    DateTest (53 tests, 2 ms)
+    DependentsArrayTest (7 tests, 1 ms)
+    DoubleByteArrayTest (11 tests, 2 ms)
+    DoubleWordArrayTest (11 tests, < 1 ms)
+    DurationTest (47 tests, 502 ms)
+    EventManagerTest (24 tests, < 1 ms)
+    ExtendedNumberParserTest (12 tests, < 1 ms)
+    FalseTest (17 tests, < 1 ms)
+    FileDirectoryTest (17 tests, 5 ms)
+    FileListTest (10 tests, 33 ms)
+    FileStreamTest (11 tests, 4 ms)
+    FileUrlTest (5 tests, 1 ms)
+    FloatArrayTest (8 tests, < 1 ms)
+    FloatCollectionTest (6 tests, < 1 ms)
+    FloatTest (89 tests, 92 ms)
+    FormTest (5 tests, 1 ms)
+    FractionTest (33 tests, 15 ms)
+    GenericUrlTest (5 tests, < 1 ms)
+    GradientFillStyleTest (5 tests, 2 ms)
+    HeapTest (22 tests, 215 ms)
+    HierarchicalUrlTest (5 tests, < 1 ms)
+    HttpUrlTest (5 tests, < 1 ms)
+    InstructionPrinterTest (5 tests, 9 ms)
+    IntegerArrayTest (9 tests, < 1 ms)
+    IntervalTest (41 tests, 1 ms)
+    KeyedSetTest (8 tests, < 1 ms)
+    LargeNegativeIntegerTest (12 tests, < 1 ms)
+    LargePositiveIntegerTest (21 tests, 246 ms)
+    LinkedListTest (239 tests, 1 ms)
+    MIMEDocumentTest (10 tests, 4 ms)
+    MatrixTest (11 tests, < 1 ms)
+    MethodReferenceTest (10 tests, 4 secs)
+    MonthTest (13 tests, < 1 ms)
+    MutexTest (11 tests, 317 ms)
+    NumberTest (16 tests, 1 ms)
+    ObjectTest (18 tests, 5 ms)
+    OrderedCollectionTest (43 tests, < 1 ms)
+    OrderedDictionaryTest (19 tests, < 1 ms)
+    PasteUpMorphTest (8 tests, 4 ms)
+    PointTest (21 tests, 27 ms)
+    PrimCallControllerAbstractTest
+      PCCByCompilationTest (42 tests, 626 ms)
+      PCCByLiteralsTest (42 tests, 295 ms)
+    ProcessTest (9 tests, < 1 ms)
+    ProtoObjectTest (10 tests, < 1 ms)
+    RandomTest (10 tests, 1 secs)
+    ReadStreamTest (49 tests, < 1 ms)
+    ReadWriteStreamTest (9 tests, < 1 ms)
+    ScaledDecimalTest (34 tests, 73 ms)
+    ScheduleTest (13 tests, 2 ms)
+    SecureHashAlgorithmTest (8 tests, 8 ms)
+    SemaphoreTest (11 tests, 265 ms)
+    SequenceableCollectionTest (29 tests, 3 ms)
+    SetTest (24 tests, 1 ms)
+    SimpleSwitchMorphTest (7 tests, < 1 ms)
+    SmallIntegerTest (14 tests, 4 ms)
+    SocketStreamTest (34 tests, 4 secs)
+    SqNumberParserTest (15 tests, 8 ms)
+    StopwatchTest (13 tests, 3 secs)
+    StringTest (83 tests, 438 ms)
+    SymbolTest (10 tests, < 1 ms)
+    TextMorphTest (5 tests, 1 ms)
+    TextTest (18 tests, < 1 ms)
+    TimeStampTest (27 tests, 2 ms)
+    TimeTest (48 tests, < 1 ms)
+    TimespanTest (64 tests, 3 ms)
+    TrueTest (17 tests, < 1 ms)
+    UndefinedObjectTest (20 tests, 15 ms)
+    UrlTest (25 tests, 1 ms)
+    VersionNumberTest (13 tests, < 1 ms)
+    WeakIdentityDictionaryTest (5 tests, 1 ms)
+    WeakIdentityKeyDictionaryTest (6 tests, 1 ms)
+    WeakKeyDictionaryTest (6 tests, 1 ms)
+    WeakMessageSendTest (9 tests, < 1 ms)
+    WeakRegistryTest (11 tests, 207 ms)
+    WeakSetTest (12 tests, 3 ms)
+    WeekTest (10 tests, < 1 ms)
+    WideStringTest (20 tests, 548 ms)
+    WordArrayTest (11 tests, < 1 ms)
+    WorldStateTest (5 tests, 258 ms)
+    WriteStreamTest (33 tests, 1 ms)
+    XMLParserTest (9 tests, 1 ms)
+    YearTest (6 tests, < 1 ms)
+  ClassVarScopeTest (10 tests, 76 ms)
+  ClipboardTest (2 tests, 2 ms)
+  ClosureCompilerTest (19 tests, 472 ms)
+    MethodHighlightingTests (1 tests, 7 ms)
+  ClosureTests (19 tests, < 1 ms)
+  CogVMBaseImageTests (1 tests, 5 ms)
+  CollectionTest (32 tests, 1 ms)
+  CompiledMethodTrailerTest (8 tests, 36 ms)
+  CompilerExceptionsTest (5 tests, 3 ms)
+  CompilerNotifyingTest (39 tests, 295 ms)
+    CompilerSyntaxErrorNotifyingTest (41 tests, 5 ms)
+  CompilerTest (15 tests, 15 secs)
+  ComplexTest (35 tests, 1 ms)
+  ContextCompilationTest (1 tests, < 1 ms)
+  DataStreamTest (5 tests, < 1 ms)
+    ReferenceStreamTest (5 tests, 1 ms)
+      SmartRefStreamTest (5 tests, 51 ms)
+  DateAndTimeEpochTest (67 tests, < 1 ms)
+  DateAndTimeLeapTest (46 tests, < 1 ms)
+  DateAndTimeReferenceStreamTest (9 tests, < 1 ms)
+  DebuggerExtensionsTest (13 tests, 1 ms)
+  DebuggerTests (15 tests, 2 secs)
+  DebuggerUnwindBug (2 tests, 93 ms)
+  DelayTest (3 tests, 6 ms)
+  DependencyBrowserTest (7 tests, 231 ms)
+  DictionaryTest (35 tests, 69 ms)
+  DosFileDirectoryTests (13 tests, < 1 ms)
+  EPSCanvasTest (1 tests, 3 ms)
+  EnvironmentTest (59 tests, 1 secs)
+  EtoysStringExtensionTest (3 tests, < 1 ms)
+  ExceptionTests (27 tests, 1 ms)
+  ExpandedSourceFileArrayTest (7 tests, 40 ms)
+  FileContentsBrowserTest (2 tests, 629 ms)
+  FileList2ModalDialogsTest (4 tests, 108 ms)
+  FlapTabTests (1 tests, 1 ms)
+  FontTest (7 tests, 7 ms)
+  FormCanvasTest (3 tests, 1 ms)
+  GeneratorTest (13 tests, < 1 ms)
+  GlobalTest (12 tests, < 1 ms)
+  HandBugs (1 tests, < 1 ms)
+  HashAndEqualsTestCase (2 tests, 1 ms)
+    TextAlignmentTest (2 tests, < 1 ms)
+    TextEmphasisTest (4 tests, < 1 ms)
+    TextFontChangeTest (2 tests, < 1 ms)
+    TextFontReferenceTest (2 tests, < 1 ms)
+    TextKernTest (2 tests, < 1 ms)
+    TextLineTest (2 tests, < 1 ms)
+    TextStyleTest (2 tests, < 1 ms)
+  HashTesterTest (1 tests, < 1 ms)
+  HashedCollectionTest (4 tests, 173 ms)
+  HelpBrowserTest (5 tests, 70 ms)
+  HelpIconsTest (1 tests, < 1 ms)
+  HelpTopicListItemWrapperTest (1 tests, < 1 ms)
+  HelpTopicTest (4 tests, < 1 ms)
+  HexTest (4 tests, < 1 ms)
+  HierarchyBrowserTest (6 tests, 6 ms)
+  HtmlReadWriterTest (15 tests, 3 ms)
+  IdentityBagTest (1 tests, < 1 ms)
+  ImageSegmentTest (2 tests, 366 ms)
+  InstVarRefLocatorTest (3 tests, 1 ms)
+  InstallerTest (6 tests, 38 ms)
+  InstallerUrlTest (1 tests, 1 ms)
+  InstructionClientTest (1 tests, 3 ms)
+  IntegerDigitLogicTest (7 tests, 43 ms)
+  IntegerTest (59 tests, 777 ms)
+  IslandVMTweaksTestCase (3 tests, < 1 ms)
+  JPEGReadWriter2Test (1 tests, 2 ms)
+  LangEnvBugs (1 tests, 276 ms)
+  LayoutFrameTest (4 tests, < 1 ms)
+  LiteralRefLocatorTest (2 tests, 40 ms)
+  LocaleTest (3 tests, < 1 ms)
+  LongTestCase
+    BytecodeDecodingTests (2 tests, 2 secs)
+    CompiledMethodComparisonTest (1 tests, 7 secs)
+    DecompilerTests (56 tests, 30 secs)
+      DecompilerTestFailuresCollector
+    LongTestCaseTestUnderTest (1 tests, < 1 ms)
+  LongTestCaseTest (2 tests, < 1 ms)
+  MCDependencySorterTest (7 tests, 1 ms)
+  MCMcmUpdaterTest (5 tests, < 1 ms)
+  MCPTest (3 tests, 3 ms)
+  MCSortingTest (2 tests, 2 ms)
+  MCTestCase
+    MCAncestryTest (4 tests, 4 ms)
+    MCChangeNotificationTest (3 tests, 3 ms)
+    MCClassDefinitionTest (12 tests, 160 ms)
+    MCEnvironmentLoadTest (1 tests, 2 secs)
+    MCFileInTest (1 tests, 2 secs)
+    MCInitializationTest (1 tests, 15 ms)
+    MCMczInstallerTest (2 tests, 615 ms)
+    MCMergingTest (12 tests, 1 ms)
+    MCMethodDefinitionTest (6 tests, 625 ms)
+    MCOrganizationTest (3 tests, < 1 ms)
+    MCPackageTest (1 tests, 2 secs)
+    MCPatchTest (1 tests, 273 ms)
+    MCRepositoryTest
+      MCDictionaryRepositoryTest (5 tests, 91 ms)
+      MCDirectoryRepositoryTest (5 tests, 168 ms)
+    MCScannerTest (6 tests, 1 ms)
+    MCSerializationTest (3 tests, 418 ms)
+    MCSnapshotBrowserTest (13 tests, 155 ms)
+    MCSnapshotTest (2 tests, 216 ms)
+    MCStReaderTest (3 tests, 31 ms)
+    MCStWriterTest (7 tests, 25 ms)
+    MCVersionNameTest (7 tests, 1 ms)
+    MCVersionTest (8 tests, < 1 ms)
+    MCWorkingCopyRenameTest (2 tests, 853 ms)
+    MCWorkingCopyTest (11 tests, 11 secs)
+  MacFileDirectoryTest (3 tests, < 1 ms)
+  MailAddressParserTest (2 tests, 1 ms)
+  MailDateAndTimeTest (2 tests, < 1 ms)
+  MailMessageTest (14 tests, 3 ms)
+  MessageNamesTest (6 tests, 357 ms)
+  MessageSendTest (1 tests, < 1 ms)
+  MessageSetTest (8 tests, 286 ms)
+    MessageTraceTest (1 tests, 71 ms)
+  MessageTest (1 tests, < 1 ms)
+  MethodContextTest (8 tests, 3 ms)
+  MethodPragmaTest (29 tests, 22 ms)
+  MethodPropertiesTest (9 tests, 13 ms)
+  MirrorPrimitiveTests (6 tests, < 1 ms)
+  MonitorTest (4 tests, 2 ms)
+  MorphLayoutTest (4 tests, 5 ms)
+  MorphTest (8 tests, 6 ms)
+    CircleMorphTest (8 tests, 7 ms)
+    MorphBugs (1 tests, < 1 ms)
+    PolygonMorphTest (2 tests, 10 ms)
+  MorphicUIManagerTest (4 tests, 40 secs)
+    StickynessBugz (1 tests, 1 ms)
+  MultiByteFileStreamTest (19 tests, 61 ms)
+  NamePolicyTest
+    AddPrefixNamePolicyTest (2 tests, < 1 ms)
+    AllNamePolicyTest (1 tests, < 1 ms)
+    ExplicitNamePolicyTest (8 tests, < 1 ms)
+    RemovePrefixNamePolicyTest (2 tests, < 1 ms)
+  NumberParsingTest (12 tests, 2 ms)
+  ObjectFinalizerTests (1 tests, 2 ms)
+  OrderedCollectionInspectorTest (1 tests, 22 ms)
+  PNGReadWriterTest (44 tests, 727 ms)
+  PackageDependencyTest (30 tests, 521 ms)
+  PackagePaneBrowserTest (3 tests, 2 ms)
+  ParserEditingTest (3 tests, 3 ms)
+  PluggableMenuItemSpecTests (6 tests, < 1 ms)
+  PluggableTextMorphTest (4 tests, 8 ms)
+  PreferencesTest (12 tests, 19 ms)
+  ProcessSpecificTest (4 tests, 125 ms)
+  ProcessTerminateBug (4 tests, < 1 ms)
+  PromiseTest (26 tests, 55 ms)
+  QFormatMimeConverterTest (4 tests, < 1 ms)
+  QuotedPrintableMimeConverterTest (8 tests, 1 ms)
+  RWBinaryOrTextStreamTest (6 tests, 1 ms)
+  RecentMessagesTest (16 tests, 555 ms)
+  RectangleTest (30 tests, < 1 ms)
+  ReleaseTest (8 tests, 1 secs)
+  RemoteStringTest (2 tests, 1 ms)
+  RenderBugz (5 tests, 1 ms)
+  ResumableTestFailureTestCase (1 tests, < 1 ms)
+  RunArrayTest (15 tests, < 1 ms)
+  RxMatcherTest (175 tests, 1 ms)
+  RxParserTest (20 tests, 6 ms)
+  SHParserST80Test (9 tests, 151 ms)
+  SMDependencyTest (0 tests)
+  SMTPClientTest (1 tests, 1 ms)
+  ST80MenusTest (3 tests, < 1 ms)
+  ST80PackageDependencyTest (1 tests, < 1 ms)
+  SUnitExtensionsTest (19 tests, 306 ms)
+  SUnitTest (19 tests, 9 secs)
+  ScannerTest (1 tests, 5 ms)
+  ScrollPaneTest (12 tests, 16 ms)
+    ScrollPaneLeftBarTest (12 tests, 12 ms)
+    ScrollPaneRetractableBarsTest (12 tests, 13 ms)
+  SetWithNilTest (6 tests, 1 ms)
+  SharedQueue2Test (3 tests, < 1 ms)
+  SimpleTestResourceTestCase (3 tests, < 1 ms)
+  SliderTest (9 tests, < 1 ms)
+    ScrollBarTest (9 tests, 6 ms)
+  SmalltalkImageTest (1 tests, < 1 ms)
+  SocketTest (14 tests, 3 secs)
+  SortFunctionTest (12 tests, < 1 ms)
+  SortedCollectionTest (14 tests, < 1 ms)
+  SqueakMessageCategoriesHelpTest (1 tests, < 1 ms)
+  SqueakSSLTest (13 tests, 1 secs)
+  StackTest (5 tests, < 1 ms)
+  StandardSourceFileArrayTest (6 tests, 17 ms)
+  StringSocketTestCase (3 tests, 128 ms)
+  StringSystemSupportTest (4 tests, < 1 ms)
+  SumBugs (5 tests, < 1 ms)
+  SystemChangeFileTest (22 tests, 12 secs)
+  SystemChangeTestRoot (0 tests)
+    ChangeHooksTest (20 tests, 6 secs)
+    SystemChangeErrorHandlingTest (3 tests, 212 ms)
+    SystemChangeNotifierTest (11 tests, < 1 ms)
+  SystemDictionaryTest (2 tests, < 1 ms)
+  SystemNavigationTest (10 tests, 1 secs)
+  SystemOrganizerTest (2 tests, < 1 ms)
+  SystemVersionTest (1 tests, < 1 ms)
+  SystemWindowTest (1 tests, 4 ms)
+  TableLayoutTest (17 tests, 16 ms)
+  TestIndenting (9 tests, 2 ms)
+  TestObjectsAsMethods (3 tests, 6 ms)
+  TestParagraphFix (4 tests, 3 ms)
+    TestNewParagraphFix (4 tests, < 1 ms)
+  TestSpaceshipOperator (3 tests, < 1 ms)
+  TestURI (48 tests, < 1 ms)
+  TestVMStatistics (1 tests, 2 ms)
+  TestValueWithinFix (6 tests, 812 ms)
+  TextAnchorTest (19 tests, 20 ms)
+  TextAndTextStreamTest (19 tests, < 1 ms)
+  TextAttributesScanningTest (28 tests, 2 ms)
+  TextDiffBuilderTest (15 tests, < 1 ms)
+  TextEditorTest (7 tests, 16 ms)
+  TextLineEndingsTest (9 tests, < 1 ms)
+  ThirtyTwoBitRegisterTest (18 tests, 426 ms)
+  TileMorphTest (4 tests, 56 ms)
+  TimespanDoSpanAYearTest (4 tests, < 1 ms)
+  TimespanDoTest (8 tests, 1 ms)
+  ToolBuilderTests
+    MVCToolBuilderTests (49 tests, 2 secs)
+    MorphicToolBuilderTests (50 tests, 61 ms)
+    SUnitToolBuilderTests (52 tests, 2 secs)
+  TraitsTestCase
+    ClassTraitTest (4 tests, 208 ms)
+    PureBehaviorTest (17 tests, 1 secs)
+    TraitCompositionTest (13 tests, 589 ms)
+    TraitFileOutTest (4 tests, 2 secs)
+    TraitMethodDescriptionTest (4 tests, 864 ms)
+    TraitSystemTest (3 tests, 259 ms)
+    TraitTest (14 tests, 1 secs)
+  UIManagerTest (1 tests, 51 ms)
+  UTF8EdgeCaseTest (14 tests, 10 ms)
+  UTF8TextConverterTest (18 tests, 4 ms)
+  UTFTextConverterWithByteOrderTest
+    UTF16TextConverterTest (3 tests, 5 ms)
+    UTF32TextConverterTest (3 tests, 5 ms)
+  UUIDPrimitivesTest (8 tests, 16 ms)
+  UUIDTest (1 tests, 1 ms)
+  UnderscoreSelectorsTest (57 tests, 91 ms)
+  UnimplementedCallBugz (1 tests, < 1 ms)
+  UnixFileDirectoryTests (1 tests, < 1 ms)
+  UserInputEventTests
+    MorphicEventDispatcherTests (11 tests, 4 ms)
+    MorphicEventFilterTests (9 tests, 5 ms)
+    MorphicEventTests (3 tests, 9 ms)
+  UserInterfaceThemeTest (27 tests, 2 secs)
+  WarningTests (6 tests, < 1 ms)
+  WeakFinalizersTest (0 tests)
+  WeakSetInspectorTest (1 tests, 16 ms)
+  WebClientServerTest (71 tests, 4 secs)
+  WideCharacterSetTest (2 tests, 2 ms)
+  Win32VMTest (1 tests, < 1 ms)
+  WriteBarrierTest (33 tests, 2 ms)
+  YearMonthWeekTest (8 tests, < 1 ms)
+
+KernelTests-Classes
+KernelTests-Methods
+KernelTests-Numbers
+KernelTests-Objects
+KernelTests-Processes
+KernelTests-WriteBarrier
+CollectionsTests-Abstract
+CollectionsTests-Arrayed
+CollectionsTests-Sequenceable
+CollectionsTests-SortFunctions
+CollectionsTests-Stack
+CollectionsTests-Streams
+CollectionsTests-Support
+CollectionsTests-Text
+CollectionsTests-Unordered
+CollectionsTests-Weak
+GraphicsTests-Files
+GraphicsTests-Primitives
+GraphicsTests-Text
+MorphicTests-Basic
+MorphicTests-Events
+MorphicTests-Kernel
+MorphicTests-Layouts
+MorphicTests-Support
+MorphicTests-Text Support
+MorphicTests-ToolBuilder
+MorphicTests-Widgets
+MorphicTests-Worlds
+Nebraska-Network-ObjectSocket
+NetworkTests-Kernel
+NetworkTests-Protocols
+NetworkTests-RFC822
+NetworkTests-URI
+NetworkTests-UUID
+NetworkTests-Url
+SMBase-domain
+ST80-Menus-Tests
+ST80-Support-Tests
+SUnit-Extensions
+SUnit-Kernel
+SUnit-Tests
+Tests-Bugs
+Tests-Compiler
+Tests-Dependencies
+Tests-Digital Signatures
+Tests-Environments
+Tests-Exceptions
+Tests-FilePackage
+Tests-Files
+Tests-Finalization
+Tests-Hex
+Tests-Installer-Core
+Tests-Localization
+Tests-Monticello
+Tests-Object Events
+Tests-ObjectsAsMethods
+Tests-PrimCallController
+Tests-Release
+Tests-System-Applications
+Tests-System-Digital Signatures
+Tests-System-Object Storage
+Tests-System-Preferences
+Tests-System-Support
+Tests-Utilities
+Tests-VM
+Etoys-Tests
+SystemChangeNotification-Tests
+XML-Parser
+ToolsTests-Browser
+ToolsTests-Debugger
+ToolsTests-FileList
+ToolsTests-Inspector
+VersionNumberTests
+MultilingualTests-TextConversion
+MultilingualTests-Display
+TraitsTests-Kernel
+HelpSystem-Tests-Builders
+HelpSystem-Tests-Core-Model
+HelpSystem-Tests-Core-UI
+Help-Squeak-Project
+BalloonTests-Fills
+MorphicExtrasTests-Postscript Filters
+MorphicExtrasTests-Flaps
+ST80Tests
+ToolBuilder-Tests
+ToolBuilder-SUnit
+ShoutTests
+SqueakSSL-Tests
+WebClient-Tests
+Regex-Tests-Core
+Chronology-Tests
+MorphicExtrasTests-Postscript Canvases
+
+KernelTests-Classes
+KernelTests-Methods
+KernelTests-Numbers
+KernelTests-Objects
+KernelTests-Processes
+KernelTests-WriteBarrier
+CollectionsTests-Abstract
+CollectionsTests-Arrayed
+CollectionsTests-Sequenceable
+CollectionsTests-SortFunctions
+CollectionsTests-Stack
+CollectionsTests-Streams
+CollectionsTests-Support
+CollectionsTests-Text
+CollectionsTests-Unordered
+CollectionsTests-Weak
+GraphicsTests-Files
+GraphicsTests-Primitives
+GraphicsTests-Text
+MorphicTests-Basic
+MorphicTests-Events
+MorphicTests-Kernel
+MorphicTests-Layouts
+MorphicTests-Support
+MorphicTests-Text Support
+MorphicTests-ToolBuilder
+MorphicTests-Widgets
+MorphicTests-Worlds
+Nebraska-Network-ObjectSocket
+NetworkTests-Kernel
+NetworkTests-Protocols
+NetworkTests-RFC822
+NetworkTests-URI
+NetworkTests-UUID
+NetworkTests-Url
+SMBase-domain
+ST80-Menus-Tests
+ST80-Support-Tests
+SUnit-Extensions
+SUnit-Kernel
+SUnit-Tests
+Tests-Bugs
+Tests-Compiler
+Tests-Dependencies
+Tests-Digital Signatures
+Tests-Environments
+Tests-Exceptions
+Tests-FilePackage
+Tests-Files
+Tests-Finalization
+Tests-Hex
+Tests-Installer-Core
+Tests-Localization
+Tests-Monticello
+Tests-Object Events
+Tests-ObjectsAsMethods
+Tests-PrimCallController
+Tests-Release
+Tests-System-Applications
+Tests-System-Digital Signatures
+Tests-System-Object Storage
+Tests-System-Preferences
+Tests-System-Support
+Tests-Utilities
+Tests-VM
+Etoys-Tests
+SystemChangeNotification-Tests
+XML-Parser
+ToolsTests-Browser
+ToolsTests-Debugger
+ToolsTests-FileList
+ToolsTests-Inspector
+VersionNumberTests
+MultilingualTests-TextConversion
+MultilingualTests-Display
+TraitsTests-Kernel
+HelpSystem-Tests-Builders
+HelpSystem-Tests-Core-Model
+HelpSystem-Tests-Core-UI
+Help-Squeak-Project
+BalloonTests-Fills
+MorphicExtrasTests-Postscript Filters
+MorphicExtrasTests-Flaps
+ST80Tests
+ToolBuilder-Tests
+ToolBuilder-SUnit
+ShoutTests
+SqueakSSL-Tests
+WebClient-Tests
+Regex-Tests-Core
+Chronology-Tests
+MorphicExtrasTests-Postscript Canvases
+
+disabled tests: CaseErrorTest MorphicUIManagerTest
+

@@ -1,0 +1,20 @@
+--- opensmalltalk-vm-sun-v5.0.14/platforms/unix/config/Makefile.install	2020-09-12 15:01:25.000000000 +0200
++++ p0/opensmalltalk-vm-sun-v5.0.14/platforms/unix/config/Makefile.install	2020-09-14 13:06:15.832430782 +0200
+@@ -25,6 +25,9 @@
+ 	  $(INSTALL_DATA) $(ICONS) $(ROOT)$(VM_APP_ICONS); \
+ 	fi
+ 
++install-ckformat : ckformat
++	$(INSTALL_PROG) ckformat $(ROOT)$(bindir)
++
+ uninstall-squeak : getversion .force
+ 	if test -n "$(VM_APP_ICONS)"; then \
+ 	  $(UNINSTALL) $(ROOT)$(VM_APP_ICONS); \
+@@ -63,7 +66,6 @@
+ 	  echo $(INSTALL_DATA) $(topdir)/platforms/unix/doc/$$f $(ROOT)$(docdir); \
+ 	  $(INSTALL_DATA) $(topdir)/platforms/unix/doc/$$f $(ROOT)$(docdir); \
+ 	done
+-	gzip -f9 $(ROOT)$(docdir)/*
+ 	$(MKINSTALLDIRS) $(ROOT)$(mandir)/man1
+ 	$(INSTALL_DATA) squeak.1 $(ROOT)$(mandir)/man1
+ 	rm -f $(ROOT)$(mandir)/man1/inisqueak.1 $(ROOT)$(mandir)/man1/inisqueak.1.gz
