@@ -9,6 +9,11 @@
 #
 
 #
+# Copyright 2020 David Stes
+#
+
+
+#
 # Package Makefile for the "OpenSmalltalk Cog Spur" Squeak Smalltalk V5 system
 # See http://squeak.org and http://opensmalltalk.org
 #
@@ -43,7 +48,7 @@ COMPONENT_PRE_CONFIGURE_ACTION = ( cp plugins.ext plugins.int $(BUILD_DIR_64) )
 # the default CFLAGS.gcc will be -m64 -O3 but this does not work for us
 # opensmalltalk code is not compatible with the gcc optimizer -O2 or higher
 # also the -g (debug) flag is intentional, perhaps omit-frame-pointer issues
-CFLAGS=			-g -DNDEBUG -DDEBUGVM=0
+gcc_OPT=			-g -DNDEBUG -DDEBUGVM=0
 
 CONFIGURE_SCRIPT= $(SOURCE_DIR)/platforms/unix/config/configure
 CONFIGURE_OPTIONS +=	--with-vmversion=5.0
@@ -59,17 +64,6 @@ CONFIGURE_ENV +=	TARGET_ARCH="-m64"
 # the opensmalltalk Makefile does not use DESTDIR
 COMPONENT_INSTALL_ARGS=  	ROOT=$(PROTO_DIR)
 COMPONENT_INSTALL_TARGETS= 	install-squeak install-doc install-plugins
-
-# opensmalltalk-vm installs a wrapper script squeak in /usr/bin
-# rename those scripts and the manpage to squeak5
-# to avoid conflict with the squeak-4 package (mediator "squeak')
-# also their old Makefile installs in /usr/doc (for SunOS the location)
-# move that to $(PROTOUSRSHAREDOCDIR) /usr/share/doc as it is nowadays
-COMPONENT_POST_INSTALL_ACTION = ( \
-  $(CP) $(PROTOUSRBINDIR)/squeak $(PROTOUSRBINDIR)/squeak5; \
-  $(MKDIR) $(PROTOUSRSHAREDOCDIR); \
-  $(MV) $(PROTOUSRDIR)/doc/squeak $(PROTOUSRSHAREDOCDIR)/squeak5; \
-  $(CP) $(PROTOUSRSHAREMAN1DIR)/squeak.1 $(PROTOUSRSHAREMAN1DIR)/squeak5.1 )
 
 REQUIRED_PACKAGES += developer/build/pkg-config
 REQUIRED_PACKAGES += x11/library/mesa
@@ -90,3 +84,4 @@ REQUIRED_PACKAGES += system/library
 REQUIRED_PACKAGES += system/library/math
 REQUIRED_PACKAGES += x11/library/libx11
 REQUIRED_PACKAGES += x11/library/libxrender
+
