@@ -9,6 +9,11 @@
 #
 
 #
+# Copyright 2020 David Stes
+#
+
+
+#
 # Package Makefile for the "Classic VM" Squeak Smalltalk V4 system
 # See http://squeak.org and http://squeakvm.org
 #
@@ -47,14 +52,6 @@ COMPONENT_PRE_CONFIGURE_ACTION = ( echo $(SVN_REV) > $(SOURCE_DIR)/platforms/uni
 
 CONFIGURE_SCRIPT= $(SOURCE_DIR)/platforms/unix/cmake/configure
 CONFIGURE_OPTIONS +=	--src=$(SOURCE_DIR)/src
-
-# squeak4 installs squeak.sh and wrapper script squeak in /usr/bin
-# the squeak.sh script uses "kdialog" and we don't include it
-# rename the scripts and the manpage squeak4.sh and squeak4
-# to avoid a conflict with the squeak-5 package (mediator "squeak')
-COMPONENT_POST_INSTALL_ACTION = ( \
-  $(CP) $(PROTOUSRBINDIR)/squeak $(PROTOUSRBINDIR)/squeak4; \
-  $(CP) $(PROTOUSRSHAREMAN1DIR)/squeak.1 $(PROTOUSRSHAREMAN1DIR)/squeak4.1 )
 
 REQUIRED_PACKAGES += developer/build/cmake
 REQUIRED_PACKAGES += developer/build/pkg-config

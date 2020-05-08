@@ -23,8 +23,13 @@ set name=info.classification \
 set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2011/092
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
-link path=usr/bin/squeak target=squeak4 mediator=squeak mediator-version=4
-file path=usr/bin/squeak4
+
+#
+# do not use a symlink - script uses test -L and has problem with symlink
+#
+
+hardlink path=usr/bin/squeak target=squeak4 mediator=squeak mediator-version=4
+file usr/bin/squeak path=usr/bin/squeak4
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/ckformat mode=0555
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.AioPlugin
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.B3DAcceleratorPlugin
@@ -53,8 +58,9 @@ file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.vm-sound-null
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.vm-sound-pulse
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/squeakvm mode=0555
 file path=usr/share/doc/squeak-$(COMPONENT_VERSION)-3775/LICENSE
-link path=usr/share/man/man1/squeak.1 target=squeak4.1 mediator=squeak \
+hardlink path=usr/share/man/man1/squeak.1 target=squeak4.1 mediator=squeak \
     mediator-version=4
-file path=usr/share/man/man1/squeak4.1
-license squeak4.license license=MIT
+file usr/share/man/man1/squeak.1 path=usr/share/man/man1/squeak4.1
+license squeak.license license=MIT
+license squeak4.license license=Squeak4
 
