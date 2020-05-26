@@ -76,6 +76,7 @@ REQUIRED_PACKAGES += library/audio/gstreamer
 REQUIRED_PACKAGES += library/libffi
 REQUIRED_PACKAGES += system/library/freetype-2
 REQUIRED_PACKAGES += x11/library/libxext
+REQUIRED_PACKAGES += x11/library/libxevie
 
 # Auto-generated dependencies
 REQUIRED_PACKAGES += SUNWcs
