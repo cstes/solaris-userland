@@ -69,6 +69,10 @@ CONFIGURE_ENV +=	TARGET_ARCH="-m64"
 COMPONENT_INSTALL_ARGS=  	ROOT=$(PROTO_DIR)
 COMPONENT_INSTALL_TARGETS= 	install-squeak install-doc install-plugins
 
+# Makefile has no strip target
+COMPONENT_POST_INSTALL_ACTION = \
+( $(STRIP) $(PROTOUSRLIBDIR64)/squeak/$(PLUGIN_REV)/squeak )
+
 REQUIRED_PACKAGES += developer/build/pkg-config
 REQUIRED_PACKAGES += x11/library/mesa
 REQUIRED_PACKAGES += system/library/dbus

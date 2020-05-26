@@ -53,6 +53,10 @@ COMPONENT_PRE_CONFIGURE_ACTION = ( echo $(SVN_REV) > $(SOURCE_DIR)/platforms/uni
 CONFIGURE_SCRIPT= $(SOURCE_DIR)/platforms/unix/cmake/configure
 CONFIGURE_OPTIONS +=	--src=$(SOURCE_DIR)/src
 
+# Makefile install/strip doesn't work
+COMPONENT_POST_INSTALL_ACTION = \
+( $(STRIP) $(PROTOUSRLIBDIR)/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/squeakvm )
+
 REQUIRED_PACKAGES += developer/build/cmake
 REQUIRED_PACKAGES += developer/build/pkg-config
 REQUIRED_PACKAGES += x11/library/mesa
