@@ -26,6 +26,13 @@ set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2011/092
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
 
+
+# add profile Squeak for pthread_setschedparam failed: Not owner issue
+# run squeak via 'pfexec squeak' if 'userattr profiles' includes Squeak
+
+file squeak.exec_attr path=etc/security/exec_attr.d/squeak group=sys
+file squeak.prof_attr path=etc/security/prof_attr.d/squeak group=sys
+
 # for the sound plugins, we only package vm-sound-pulse
 # we do not package vm-sound-OSS and vm-sound-Sun
 # on my machine, vm-sound-Sun compiles, but it does not work
