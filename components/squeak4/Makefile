@@ -44,7 +44,7 @@ SVN_REV=		3775
 
 COMPONENT_SRC=		squeak4-$(SVN_REV)
 COMPONENT_ARCHIVE=	squeak4-$(SVN_REV).tar.gz
-# COMPONENT_ARCHIVE_HASH= sha256:ff75ec2d5a46797aeb7fdd52dec9ea0f78a03623c1f2f04f9ad975ed9c45b211
+COMPONENT_ARCHIVE_HASH= sha256:2578aa4cffb3f583a29ae68769ea16a4589ab8650f1b66ce18865584c1682a96
 COMPONENT_ARCHIVE_URL=  https://downloads.sourceforge.net/project/solaris-squeak/$(COMPONENT_ARCHIVE)
 
 TEST_TARGET= $(NO_TESTS)
@@ -60,7 +60,7 @@ CONFIGURE_OPTIONS +=	--src=$(SOURCE_DIR)/src
 
 # Makefile install/strip doesn't work
 COMPONENT_POST_INSTALL_ACTION = \
-( $(STRIP) $(PROTOUSRLIBDIR)/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/squeakvm )
+( strip $(PROTOUSRLIBDIR)/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/squeakvm )
 
 REQUIRED_PACKAGES += developer/build/cmake
 REQUIRED_PACKAGES += developer/build/pkg-config
