@@ -1,0 +1,11 @@
+--- opensmalltalk-vm-sun-v5.0.7/platforms/unix/plugins/SqueakSSL/openssl_overlay.h	Sat May  2 12:55:37 2020
++++ p0/opensmalltalk-vm-sun-v5.0.7/platforms/unix/plugins/SqueakSSL/openssl_overlay.h	Tue Jun  9 16:19:10 2020
+@@ -164,7 +164,7 @@
+ #define sqo_SSL_library_init SSL_library_init
+ #define sqo_SSL_load_error_strings SSL_load_error_strings
+ 
+-#define sk_GENERAL_NAME_freefunc void(*)(void*)
++#define sk_GENERAL_NAME_freefunc void(*)(GENERAL_NAME*)
+ 
+ #endif
+ 
