@@ -21,7 +21,7 @@
 # opensmalltalk-vm can be built both in 32 and 64bit
 # but generally SqueakV5 images are 64bit
 BUILD_BITS=64
-COMPILER=gcc
+COMPILER=studio
 
 include ../../make-rules/shared-macros.mk
 

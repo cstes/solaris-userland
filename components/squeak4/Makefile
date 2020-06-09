@@ -27,7 +27,7 @@
 # squeak4 can be built both in 32-bit and 64-bit 
 # but generally SqueakV4 images are 32bit
 # BUILD_BITS=32
-COMPILER=gcc
+COMPILER=studio
 
 include ../../make-rules/shared-macros.mk
 
