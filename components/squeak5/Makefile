@@ -52,7 +52,10 @@ COMPONENT_PRE_CONFIGURE_ACTION = ( cp plugins.ext plugins.int $(BUILD_DIR_64) )
 # the default CFLAGS.gcc will be -m64 -O3 but this does not work for us
 # opensmalltalk code is not compatible with the gcc optimizer -O2 or higher
 # also the -g (debug) flag is intentional, perhaps omit-frame-pointer issues
+# for studio the default -xO4 is reset by opensmalltalk configure to -xO3
+# various results sometimes -g works, sometimes not, also reset opt to -xO2
 gcc_OPT=			-g -DNDEBUG -DDEBUGVM=0
+studio_OPT=			-xO2 -DNDEBUG -DDEBUGVM=0
 
 CONFIGURE_SCRIPT= $(SOURCE_DIR)/platforms/unix/config/configure
 CONFIGURE_OPTIONS +=	--with-vmversion=5.0
