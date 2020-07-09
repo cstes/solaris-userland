@@ -28,7 +28,7 @@ include ../../make-rules/shared-macros.mk
 COMPONENT_NAME=		squeak-5
 COMPONENT_VERSION=	5.0.8
 GIT_TAG=		sun-v$(COMPONENT_VERSION)
-PLUGIN_REV=		5.0-202005021055
+PLUGIN_REV=		5.0-202007040853
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 COMPONENT_SRC=		opensmalltalk-vm-$(GIT_TAG)

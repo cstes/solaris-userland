@@ -26,13 +26,6 @@ set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2011/092
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
 
-
-# add profile Squeak for pthread_setschedparam failed: Not owner issue
-# run squeak via 'pfexec squeak' if 'userattr profiles' includes Squeak
-
-file squeak.exec_attr path=etc/security/exec_attr.d/squeak group=sys
-file squeak.prof_attr path=etc/security/prof_attr.d/squeak group=sys
-
 # for the sound plugins, we only package vm-sound-pulse
 # we do not package vm-sound-OSS and vm-sound-Sun
 # on my machine, vm-sound-Sun compiles, but it does not work
@@ -56,12 +49,12 @@ file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/vm-display-X11.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/vm-display-null.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/vm-sound-null.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/vm-sound-pulse.so
-file usr/doc/squeak/COPYING.gz \
-    path=usr/share/doc/squeak-$(IPS_COMPONENT_VERSION)/COPYING.gz
-file usr/doc/squeak/COPYRIGHT.gz \
-    path=usr/share/doc/squeak-$(IPS_COMPONENT_VERSION)/COPYRIGHT.gz
-file usr/doc/squeak/LICENSE.gz \
-    path=usr/share/doc/squeak-$(IPS_COMPONENT_VERSION)/LICENSE.gz
+file usr/doc/squeak/COPYING \
+    path=usr/share/doc/squeak-$(IPS_COMPONENT_VERSION)/COPYING
+file usr/doc/squeak/COPYRIGHT \
+    path=usr/share/doc/squeak-$(IPS_COMPONENT_VERSION)/COPYRIGHT
+file usr/doc/squeak/LICENSE \
+    path=usr/share/doc/squeak-$(IPS_COMPONENT_VERSION)/LICENSE
 hardlink path=usr/share/man/man1/squeak.1 target=squeak5.1 mediator=squeak \
     mediator-implementation=stack-spur mediator-version=5
 file usr/share/man/man1/squeak.1 path=usr/share/man/man1/squeak5.1

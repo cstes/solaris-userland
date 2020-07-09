@@ -1,0 +1,10 @@
+--- opensmalltalk-vm-sun-v5.0.8/platforms/unix/config/Makefile.install	2020-07-04 10:53:04.000000000 +0200
++++ p0/opensmalltalk-vm-sun-v5.0.8/platforms/unix/config/Makefile.install	2020-07-09 11:35:41.937554053 +0200
+@@ -63,7 +63,6 @@
+ 	  echo $(INSTALL_DATA) $(topdir)/platforms/unix/doc/$$f $(ROOT)$(docdir); \
+ 	  $(INSTALL_DATA) $(topdir)/platforms/unix/doc/$$f $(ROOT)$(docdir); \
+ 	done
+-	gzip -f9 $(ROOT)$(docdir)/*
+ 	$(MKINSTALLDIRS) $(ROOT)$(mandir)/man1
+ 	$(INSTALL_DATA) squeak.1 $(ROOT)$(mandir)/man1
+ 	rm -f $(ROOT)$(mandir)/man1/inisqueak.1 $(ROOT)$(mandir)/man1/inisqueak.1.gz
