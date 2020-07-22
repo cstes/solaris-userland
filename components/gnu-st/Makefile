@@ -13,7 +13,7 @@
 # 
 
 #
-# Package Makefile for "GNU Smalltalk" or "gst"
+# Package Makefile for "GNU Smalltalk" or "gnu-st" (gst)
 #
 # see http://smalltalk.gnu.org for more info
 #
@@ -29,7 +29,7 @@ COMPILER=gcc
 
 include ../../make-rules/shared-macros.mk
 
-COMPONENT_NAME=		gst
+COMPONENT_NAME=		gnu-st
 COMPONENT_VERSION=	3.2.91
 COMPONENT_SUMMARY=	GNU Smalltalk
 COMPONENT_PROJECT_URL=	http://smalltalk.gnu.org
