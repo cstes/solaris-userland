@@ -26,17 +26,20 @@ COMPILER=studio
 include ../../make-rules/shared-macros.mk
 
 COMPONENT_NAME=		squeak-5
-COMPONENT_VERSION=	5.0.8
+COMPONENT_VERSION=	5.0.10
 GIT_TAG=		sun-v$(COMPONENT_VERSION)
-PLUGIN_REV=		5.0-202007040853
+PLUGIN_REV=		5.0-202007210625
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 COMPONENT_SRC=		opensmalltalk-vm-$(GIT_TAG)
 COMPONENT_ARCHIVE=	$(COMPONENT_SRC).tar.gz
-COMPONENT_ARCHIVE_HASH=	sha256:a7539ef44566c10b48caf94d0f928c4b50f5799723d1b82efb58234a6d9a3661
+COMPONENT_ARCHIVE_HASH= sha256:2d2dfe38e0e288f9e0248473168b9c94dc70b17211f640920d4afc5bc1be687a
 COMPONENT_ARCHIVE_URL=	https://codeload.github.com/cstes/opensmalltalk-vm/tar.gz/$(GIT_TAG)
 
 TEST_TARGET= $(NO_TESTS)
+
+# some builds seem to be broken with -Bdirect
+LD_B_DIRECT=
 
 include $(WS_MAKE_RULES)/common.mk
 
@@ -66,6 +69,7 @@ CONFIGURE_ENV +=	TARGET_ARCH="-m64"
 
 # the opensmalltalk Makefile does not use DESTDIR
 COMPONENT_INSTALL_ARGS=  	ROOT=$(PROTO_DIR)
+COMPONENT_BUILD_TARGETS=        getversion squeak plugins
 COMPONENT_INSTALL_TARGETS= 	install-squeak install-doc install-plugins
 
 # Makefile has no strip target
@@ -81,15 +85,12 @@ REQUIRED_PACKAGES += system/library/freetype-2
 REQUIRED_PACKAGES += x11/library/libxext
 REQUIRED_PACKAGES += x11/library/libxevie
 
-# Auto-generated dependencies
-REQUIRED_PACKAGES += SUNWcs
+# Auto-generated contents below.
 REQUIRED_PACKAGES += library/audio/pulseaudio
-REQUIRED_PACKAGES += library/desktop/cairo
-REQUIRED_PACKAGES += library/desktop/pango
-REQUIRED_PACKAGES += library/glib2
 REQUIRED_PACKAGES += library/security/openssl
+REQUIRED_PACKAGES += shell/ksh93
 REQUIRED_PACKAGES += system/library
+REQUIRED_PACKAGES += system/library/libc
 REQUIRED_PACKAGES += system/library/math
 REQUIRED_PACKAGES += x11/library/libx11
 REQUIRED_PACKAGES += x11/library/libxrender
-

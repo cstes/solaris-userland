@@ -1,5 +1,5 @@
---- opensmalltalk-vm-sun-v5.0.8/platforms/unix/config/Makefile.in	2020-07-04 10:53:04.000000000 +0200
-+++ p0/opensmalltalk-vm-sun-v5.0.8/platforms/unix/config/Makefile.in	2020-07-09 11:33:56.603565964 +0200
+--- opensmalltalk-vm-sun-v5.0.10/platforms/unix/config/Makefile.in	2020-07-21 08:25:34.000000000 +0200
++++ p0/opensmalltalk-vm-sun-v5.0.10/platforms/unix/config/Makefile.in	2020-07-09 11:33:56.603565964 +0200
 @@ -77,10 +77,10 @@
  
  # unix launch scripts
