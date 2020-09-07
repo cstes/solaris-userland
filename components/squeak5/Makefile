@@ -26,14 +26,14 @@ COMPILER=studio
 include ../../make-rules/shared-macros.mk
 
 COMPONENT_NAME=		squeak-5
-COMPONENT_VERSION=	5.0.10
+COMPONENT_VERSION=	5.0.13
 GIT_TAG=		sun-v$(COMPONENT_VERSION)
-PLUGIN_REV=		5.0-202007210625
+PLUGIN_REV=		5.0-202009031744
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 COMPONENT_SRC=		opensmalltalk-vm-$(GIT_TAG)
 COMPONENT_ARCHIVE=	$(COMPONENT_SRC).tar.gz
-COMPONENT_ARCHIVE_HASH= sha256:2d2dfe38e0e288f9e0248473168b9c94dc70b17211f640920d4afc5bc1be687a
+COMPONENT_ARCHIVE_HASH= sha256:3af188effb37939440a44edbc7fc01ebcc0daf98e359ed0b71154c6a384ac5fc
 COMPONENT_ARCHIVE_URL=	https://codeload.github.com/cstes/opensmalltalk-vm/tar.gz/$(GIT_TAG)
 
 TEST_TARGET= $(NO_TESTS)
@@ -69,8 +69,9 @@ CONFIGURE_ENV +=	TARGET_ARCH="-m64"
 
 # the opensmalltalk Makefile does not use DESTDIR
 COMPONENT_INSTALL_ARGS=  	ROOT=$(PROTO_DIR)
-COMPONENT_BUILD_TARGETS=        getversion squeak plugins
-COMPONENT_INSTALL_TARGETS= 	install-squeak install-doc install-plugins
+COMPONENT_BUILD_TARGETS=        getversion ckformat squeak plugins
+COMPONENT_INSTALL_TARGETS= 	install-squeak install-doc install-plugins\
+	install-ckformat
 
 # Makefile has no strip target
 COMPONENT_POST_INSTALL_ACTION = \

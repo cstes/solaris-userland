@@ -1,11 +1,11 @@
---- opensmalltalk-vm-sun-v5.0.10/platforms/Cross/plugins/sqPluginsSCCSVersion.h	2020-07-21 08:25:34.000000000 +0200
-+++ p0/opensmalltalk-vm-sun-v5.0.10/platforms/Cross/plugins/sqPluginsSCCSVersion.h	2020-07-24 13:56:10.710063700 +0200
+--- opensmalltalk-vm-sun-v5.0.13/platforms/Cross/plugins/sqPluginsSCCSVersion.h	2020-09-03 19:44:13.000000000 +0200
++++ p0/opensmalltalk-vm-sun-v5.0.13/platforms/Cross/plugins/sqPluginsSCCSVersion.h	2020-09-07 11:56:54.960177522 +0200
 @@ -9,10 +9,10 @@
   */
  
  #if SUBVERSION
 -static char SvnRawPluginsRevisionString[] = "$Rev$";
-+static char SvnRawPluginsRevisionString[] = "$Rev: 202007210625 $";
++static char SvnRawPluginsRevisionString[] = "$Rev: 202009031744 $";
  # define PLUGINS_REV_START (SvnRawPluginsRevisionString + 6)
  
 -static char SvnRawPluginsRepositoryURL[] = "$URL$";
@@ -18,7 +18,7 @@
  # undef URL_START
  #elif GIT
 -static char GitRawPluginsRevisionString[] = "$Rev$";
-+static char GitRawPluginsRevisionString[] = "$Rev: 202007210625 $";
++static char GitRawPluginsRevisionString[] = "$Rev: 202009031744 $";
  # define PLUGINS_REV_START (GitRawPluginsRevisionString + 6)
  
 -static char GitRawPluginsRepositoryURL[] = "$URL$";

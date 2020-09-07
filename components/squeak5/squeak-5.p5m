@@ -24,6 +24,9 @@ set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
 set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2011/092
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
+hardlink path=usr/bin/ckformat target=ckformat5 mediator=squeak \
+    mediator-implementation=stack-spur mediator-version=5
+file usr/bin/ckformat path=usr/bin/ckformat5
 
 # for the sound plugins, we only package vm-sound-pulse
 # we do not package vm-sound-OSS and vm-sound-Sun
