@@ -1,5 +1,5 @@
---- opensmalltalk-vm-sun-v5.0.13/platforms/unix/config/Makefile.in	2020-09-03 19:44:13.000000000 +0200
-+++ p0/opensmalltalk-vm-sun-v5.0.13/platforms/unix/config/Makefile.in	2020-09-07 12:00:39.699569490 +0200
+--- opensmalltalk-vm-sun-v5.0.14/platforms/unix/config/Makefile.in	2020-09-12 15:01:25.000000000 +0200
++++ p0/opensmalltalk-vm-sun-v5.0.14/platforms/unix/config/Makefile.in	2020-09-14 13:05:14.344397135 +0200
 @@ -67,6 +67,9 @@
  getversion : ${cfgdir}/getversion.c ${topdir}/platforms/Cross/vm/sqSCCSVersion.h
  	$(LINK) getversion $(INCLUDES) ${cfgdir}/getversion.c

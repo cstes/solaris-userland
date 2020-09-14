@@ -1,5 +1,5 @@
---- opensmalltalk-vm-sun-v5.0.13/platforms/unix/plugins/XDisplayControlPlugin/Makefile.inc	2020-09-03 19:44:13.000000000 +0200
-+++ p0/opensmalltalk-vm-sun-v5.0.13/platforms/unix/plugins/XDisplayControlPlugin/Makefile.inc	2020-09-07 12:04:13.709183166 +0200
+--- opensmalltalk-vm-sun-v5.0.14/platforms/unix/plugins/XDisplayControlPlugin/Makefile.inc	2020-09-12 15:01:25.000000000 +0200
++++ p0/opensmalltalk-vm-sun-v5.0.14/platforms/unix/plugins/XDisplayControlPlugin/Makefile.inc	2020-09-14 13:06:53.760723212 +0200
 @@ -1,9 +1,2 @@
  XCPPFLAGS= -I$(topdir)/platforms/Cross/plugins/FilePlugin -I$(topdir)/platforms/Cross/plugins/SocketPlugin
  XINCLUDES= $(X_INCLUDES)
