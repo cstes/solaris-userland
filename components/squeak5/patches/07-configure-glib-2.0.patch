@@ -1,11 +1,11 @@
 --- opensmalltalk-vm-sun-v5.0.14/platforms/unix/config/configure	2020-09-12 15:01:25.000000000 +0200
-+++ p0/opensmalltalk-vm-sun-v5.0.14/platforms/unix/config/configure	2020-09-14 13:22:38.191726743 +0200
++++ p0/opensmalltalk-vm-sun-v5.0.14/platforms/unix/config/configure	2020-09-17 09:07:26.958972461 +0200
 @@ -19353,7 +19353,7 @@
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for PangoCairo libraries" >&5
  $as_echo_n "checking for PangoCairo libraries... " >&6; }
  save_CPPFLAGS="$CPPFLAGS"
 -CPPFLAGS="-I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include"
-+CPPFLAGS="-I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/amd64/glib-2.0/include"
++CPPFLAGS="$CPPFLAGS -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/amd64/glib-2.0/include"
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #include <pango/pangocairo.h>
