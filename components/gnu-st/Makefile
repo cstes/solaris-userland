@@ -21,6 +21,7 @@
 # gst can be built 64-bit but seems to have an issue
 # ../scripts/Package.st:31: Abort in 64-bit case
 # still under investigation (the gst itself works in 64bit)
+# a 32bit version makes most sense as GNU st uses 'int' (4 bytes) as object ID
 # gst requires a lot of GNU tools like gcc (compiles only with gcc), gawk ...
 # also  libtool pkg-config must be installed for configure and build to work
 
