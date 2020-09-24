@@ -1,39 +1,55 @@
 #
-# This file and its contents are supplied under the terms of the
-# Common Development and Distribution License ("CDDL"), version 1.0.
-# You may only use this file in accordance with the terms of version
-# 1.0 of the CDDL.
+# CDDL HEADER START
 #
-# A full copy of the text of the CDDL should have accompanied this
-# source.  A copy of the CDDL is also available via the Internet at
-# http://www.illumos.org/license/CDDL.
+# The contents of this file are subject to the terms of the
+# Common Development and Distribution License (the "License").
+# You may not use this file except in compliance with the License.
+#
+# You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+# or http://www.opensolaris.org/os/licensing.
+# See the License for the specific language governing permissions
+# and limitations under the License.
+#
+# When distributing Covered Code, include this CDDL HEADER in each
+# file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+# If applicable, add the following below this CDDL HEADER, with the
+# fields enclosed by brackets "[]" replaced with your own identifying
+# information: Portions Copyright [yyyy] [name of copyright owner]
+#
+# CDDL HEADER END
 #
 
 #
-# Copyright 2020 <contributor>
+# Copyright (c) 2017, Oracle and/or its affiliates. All rights reserved.
 #
 
-set name=pkg.fmri value=pkg:/$(COMPONENT_FMRI)@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
-set name=pkg.summary value="$(COMPONENT_SUMMARY)"
-set name=info.classification value="$(COMPONENT_CLASSIFICATION)"
-set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
+set name=pkg.fmri \
+    value=pkg:/$(IPS_PKG_NAME)@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="XXX Summary XXX"
+set name=com.oracle.info.description value="XXX Description XXX"
+set name=com.oracle.info.tpno value=$(TPNO)
+set name=info.classification \
+    value="org.opensolaris.category.2008:XXX Classification XXX"
 set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
+set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
+set name=org.opensolaris.arc-caseid value=PSARC/YYYY/XXX
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
 
-license $(COMPONENT_LICENSE_FILE) license='$(COMPONENT_LICENSE)'
+license $(COPYRIGHT_FILE) license='$(COPYRIGHTS)'
 
+dir  path=mangled
 file path=usr/bin/gst
-file path=usr/bin/gst-blox
-hardlink path=usr/bin/gst-browser target=gst-blox
+hardlink path=usr/bin/gst-blox target=gst-profile
+hardlink path=usr/bin/gst-browser target=gst-profile
 file path=usr/bin/gst-config
-hardlink path=usr/bin/gst-convert target=gst-blox
-hardlink path=usr/bin/gst-doc target=gst-blox
-hardlink path=usr/bin/gst-load target=gst-blox
-hardlink path=usr/bin/gst-package target=gst-blox
-hardlink path=usr/bin/gst-profile target=gst-blox
-hardlink path=usr/bin/gst-reload target=gst-blox
-hardlink path=usr/bin/gst-remote target=gst-blox
-hardlink path=usr/bin/gst-sunit target=gst-blox
+hardlink path=usr/bin/gst-convert target=gst-profile
+hardlink path=usr/bin/gst-doc target=gst-profile
+hardlink path=usr/bin/gst-load target=gst-profile
+hardlink path=usr/bin/gst-package target=gst-profile
+file path=usr/bin/gst-profile
+hardlink path=usr/bin/gst-reload target=gst-profile
+hardlink path=usr/bin/gst-remote target=gst-profile
+hardlink path=usr/bin/gst-sunit target=gst-profile
 file path=usr/include/gst-gobject.h
 file path=usr/include/gst.h
 file path=usr/include/gstpub.h
@@ -46,6 +62,7 @@ link path=usr/lib/libgst.so target=libgst.so.7.1.3
 link path=usr/lib/libgst.so.7 target=libgst.so.7.1.3
 file path=usr/lib/libgst.so.7.1.3
 file path=usr/lib/pkgconfig/gnu-smalltalk.pc
+dir  path=usr/lib/smalltalk
 file path=usr/lib/smalltalk/blox-tk-$(COMPONENT_VERSION).so
 file path=usr/lib/smalltalk/blox-tk.a
 link path=usr/lib/smalltalk/blox-tk.so target=blox-tk-$(COMPONENT_VERSION).so
@@ -85,7 +102,10 @@ link path=usr/lib/smalltalk/iconv.so target=iconv-$(COMPONENT_VERSION).so
 file path=usr/lib/smalltalk/zlib-$(COMPONENT_VERSION).so
 file path=usr/lib/smalltalk/zlib.a
 link path=usr/lib/smalltalk/zlib.so target=zlib-$(COMPONENT_VERSION).so
+dir  path=usr/libexec
+dir  path=usr/libexec/smalltalk
 file path=usr/libexec/smalltalk/gnutls-wrapper
+dir  path=usr/libexec/smalltalk/vfs
 file path=usr/libexec/smalltalk/vfs/deb
 file path=usr/libexec/smalltalk/vfs/lslR
 file path=usr/libexec/smalltalk/vfs/mailfs
@@ -99,7 +119,7 @@ file path=usr/libexec/smalltalk/vfs/uzip
 file path=usr/libexec/smalltalk/vfs/uzoo
 file path=usr/share/aclocal/gst-package.m4
 file path=usr/share/aclocal/gst.m4
-file path=usr/share/info/dir
+dir  path=usr/share/info
 file path=usr/share/info/gst-base.info
 file path=usr/share/info/gst-base.info-1
 file path=usr/share/info/gst-base.info-2
@@ -119,9 +139,10 @@ file path=usr/share/man/man1/gst-load.1
 file path=usr/share/man/man1/gst-package.1
 file path=usr/share/man/man1/gst-profile.1
 link path=usr/share/man/man1/gst-reload.1 \
-    target=/scratch/clone/components/runtime/gst/build/prototype/$(MACH)/usr/share/man/man1/gst-load.1
+    target=/scratch/clone/components/gnu-st/build/prototype/$(MACH)/usr/share/man/man1/gst-load.1
 file path=usr/share/man/man1/gst-sunit.1
 file path=usr/share/man/man1/gst.1
+dir  path=usr/share/smalltalk
 file path=usr/share/smalltalk/Announcements.star
 file path=usr/share/smalltalk/BLOXBrowser.star
 file path=usr/share/smalltalk/Blox.star
@@ -184,6 +205,7 @@ file path=usr/share/smalltalk/XML-XMLParser.star
 file path=usr/share/smalltalk/XPath.star
 file path=usr/share/smalltalk/XSL.star
 file path=usr/share/smalltalk/ZLib.star
+dir  path=usr/share/smalltalk/examples
 file path=usr/share/smalltalk/examples/Bench.st
 file path=usr/share/smalltalk/examples/CairoBlit.st
 file path=usr/share/smalltalk/examples/CairoDemo.st
@@ -216,6 +238,7 @@ file path=usr/share/smalltalk/examples/Tokenizer.st
 file path=usr/share/smalltalk/examples/pepe.sed
 file path=usr/share/smalltalk/examples/shell
 file path=usr/share/smalltalk/examples/xml.sed
+dir  path=usr/share/smalltalk/kernel
 file path=usr/share/smalltalk/kernel/AbstNamespc.st
 file path=usr/share/smalltalk/kernel/AnsiDates.st
 file path=usr/share/smalltalk/kernel/Array.st
@@ -340,6 +363,7 @@ file path=usr/share/smalltalk/kernel/VarBinding.st
 file path=usr/share/smalltalk/kernel/WeakObjects.st
 file path=usr/share/smalltalk/kernel/WriteStream.st
 file path=usr/share/smalltalk/packages.xml
+dir  path=usr/share/smalltalk/scripts
 file path=usr/share/smalltalk/scripts/Convert.st
 file path=usr/share/smalltalk/scripts/GenDoc.st
 file path=usr/share/smalltalk/scripts/Load.st
@@ -347,6 +371,7 @@ file path=usr/share/smalltalk/scripts/Package.st
 file path=usr/share/smalltalk/scripts/Profile.st
 file path=usr/share/smalltalk/scripts/Remote.st
 file path=usr/share/smalltalk/scripts/Test.st
+dir  path=usr/share/smalltalk/unsupported
 file path=usr/share/smalltalk/unsupported/CPP-test.st
 file path=usr/share/smalltalk/unsupported/CParseType-test.st
 file path=usr/share/smalltalk/unsupported/CString.st
