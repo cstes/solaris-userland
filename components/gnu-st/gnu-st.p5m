@@ -17,7 +17,7 @@
 <transform file -> add pkg.depend.bypass-generate libGL\.so\.1>
 <transform file -> add pkg.depend.bypass-generate libGLU\.so>
 set name=pkg.fmri \
-    value=pkg:/runtime/gst@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+    value=pkg:/runtime/gnu-st@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
 set name=pkg.summary value="GNU Smalltalk"
 set name=info.classification \
     value="org.opensolaris.category.2008:Development/Other Languages"
