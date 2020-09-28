@@ -33,6 +33,10 @@ file usr/bin/ckformat path=usr/bin/ckformat5
 # on my machine, vm-sound-Sun compiles, but it does not work
 # for the /usr/bin/squeak link, use hardlink, not symlink (test -L problem)
 
+# the UnicodePlugin currently compiles on Solaris 10 and 11.3,
+# but not on Solaris 11.4 due to an include path problem (configure squeak)
+# we exclude the UnicodePlugin by editing the plugins.ext
+
 hardlink path=usr/bin/squeak target=squeak5 mediator=squeak \
     mediator-implementation=stack-spur mediator-version=5
 file usr/bin/squeak path=usr/bin/squeak5
@@ -47,7 +51,6 @@ file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/Squeak3D.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/SqueakFFIPrims.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/SqueakSSL.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/UUIDPlugin.so
-file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/UnicodePlugin.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/UnixOSProcessPlugin.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/XDisplayControlPlugin.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/squeak mode=0555

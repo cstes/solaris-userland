@@ -1,7 +1,0 @@
---- opensmalltalk-vm-sun-v5.0.14/platforms/unix/plugins/UnicodePlugin/Makefile.inc	2020-09-12 15:01:25.000000000 +0200
-+++ p0/opensmalltalk-vm-sun-v5.0.14/platforms/unix/plugins/UnicodePlugin/Makefile.inc	2020-09-14 13:08:03.472689473 +0200
-@@ -1,2 +1,2 @@
--XCPPFLAGS=	-I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0  -I/usr/lib/glib-2.0/include -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include
--XLDFLAGS= -lpangocairo-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lglib-2.0
-+XCPPFLAGS=	-I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/amd64/glib-2.0/include
-+xLDFLAGS= -lpangocairo-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lglib-2.0

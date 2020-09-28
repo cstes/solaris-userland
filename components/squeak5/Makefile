@@ -14,7 +14,7 @@
 
 
 #
-# Package Makefile for the "OpenSmalltalk Cog Spur" Squeak Smalltalk V5 system
+# Package Makefile for the "OpenSmalltalk Stack Spur" Squeak Smalltalk V5 system
 # See http://squeak.org and http://opensmalltalk.org
 #
 
@@ -26,14 +26,14 @@ COMPILER=studio
 include ../../make-rules/shared-macros.mk
 
 COMPONENT_NAME=		squeak-5
-COMPONENT_VERSION=	5.0.14
+COMPONENT_VERSION=	5.0.15
 GIT_TAG=		sun-v$(COMPONENT_VERSION)
-PLUGIN_REV=		5.0-202009121301
+PLUGIN_REV=		5.0-202009251034
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 COMPONENT_SRC=		opensmalltalk-vm-$(GIT_TAG)
 COMPONENT_ARCHIVE=	$(COMPONENT_SRC).tar.gz
-COMPONENT_ARCHIVE_HASH= sha256:8476a7b2303c23b6cb0f61577ab7ff48717d9006f46bb4cf83ffc7f0fd85fb04
+COMPONENT_ARCHIVE_HASH= sha256:00c7118edf4b8e0e31e6d4bcfea7b1bff0fa4ed5adb7a5e2787ad37c9a9f475d
 COMPONENT_ARCHIVE_URL=	https://codeload.github.com/cstes/opensmalltalk-vm/tar.gz/$(GIT_TAG)
 
 TEST_TARGET= $(NO_TESTS)
@@ -54,7 +54,7 @@ COMPONENT_PRE_CONFIGURE_ACTION = ( cp plugins.ext plugins.int $(BUILD_DIR_64) )
 # for studio the default -xO4 is reset by opensmalltalk configure to -xO3
 # various results sometimes -g works, sometimes not, also reset opt to -xO2
 gcc_OPT=			-g -DNDEBUG -DDEBUGVM=0
-studio_OPT=			-xO2 -DNDEBUG -DDEBUGVM=0
+studio_OPT=			-g -DNDEBUG -DDEBUGVM=0
 
 CONFIGURE_SCRIPT= $(SOURCE_DIR)/platforms/unix/config/configure
 CONFIGURE_OPTIONS +=	--with-vmversion=5.0
