@@ -26,14 +26,14 @@ COMPILER=studio
 include ../../make-rules/shared-macros.mk
 
 COMPONENT_NAME=		squeak-5
-COMPONENT_VERSION=	5.0.17
+COMPONENT_VERSION=	5.0.18
 GIT_TAG=		sun-v$(COMPONENT_VERSION)
-PLUGIN_REV=		5.0-202010110952
+PLUGIN_REV=		5.0-202010221226
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 COMPONENT_SRC=		opensmalltalk-vm-$(GIT_TAG)
 COMPONENT_ARCHIVE=	$(COMPONENT_SRC).tar.gz
-COMPONENT_ARCHIVE_HASH= sha256:7b1e8e2bbc4b5baa0f07fe0e460e4d740128aaf08567af63facb28717a716d04
+COMPONENT_ARCHIVE_HASH= sha256:e82cd95a2e3971b54bb502bccf9905ee8b43dded528236d19065c336985e4f29
 
 COMPONENT_ARCHIVE_URL=	https://codeload.github.com/cstes/opensmalltalk-vm/tar.gz/$(GIT_TAG)
 
@@ -51,11 +51,11 @@ COMPONENT_PRE_CONFIGURE_ACTION = ( cp plugins.ext plugins.int $(BUILD_DIR_64) )
 
 # the default CFLAGS.gcc will be -m64 -O3 but this does not work for us
 # opensmalltalk code is not compatible with the gcc optimizer -O2 or higher
-# also the -g (debug) flag is intentional, perhaps omit-frame-pointer issues
+# also the -g (debug) flag is intentional (sometimes without -g doesn't work)
 # for studio the default -xO4 is reset by opensmalltalk configure to -xO3
 # various results sometimes -g works, sometimes not, also reset opt to -xO2
-gcc_OPT=			-g -DNDEBUG -DDEBUGVM=0
-studio_OPT=			-g -DNDEBUG -DDEBUGVM=0
+gcc_OPT=			-g -DAIO_DEBUG -DNDEBUG -DDEBUGVM=0
+studio_OPT=			-g -DAIO_DEBUG -DNDEBUG -DDEBUGVM=0
 
 CONFIGURE_SCRIPT= $(SOURCE_DIR)/platforms/unix/config/configure
 CONFIGURE_OPTIONS +=	--with-vmversion=5.0
