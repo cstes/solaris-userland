@@ -1,15 +1,15 @@
---- opensmalltalk-vm-sun-v5.0.18/platforms/Cross/vm/sqSCCSVersion.h	2020-10-22 14:26:32.000000000 +0200
-+++ p0/opensmalltalk-vm-sun-v5.0.18/platforms/Cross/vm/sqSCCSVersion.h	2020-10-23 11:54:19.476235412 +0200
+--- opensmalltalk-vm-sun-v5.0.19/platforms/Cross/vm/sqSCCSVersion.h	2020-11-06 09:23:58.000000000 +0100
++++ p0/opensmalltalk-vm-sun-v5.0.19/platforms/Cross/vm/sqSCCSVersion.h	2020-11-07 12:21:46.313661288 +0100
 @@ -28,13 +28,13 @@
  
  #if SUBVERSION
  # define PREFIX "r"
 -static char SvnRawRevisionString[] = "$Rev$";
-+static char SvnRawRevisionString[] = "$Rev: 202010221226-cog $";
++static char SvnRawRevisionString[] = "$Rev: 202011060823-cog $";
  # define REV_START (SvnRawRevisionString + 6)
  
 -static char SvnRawRevisionDate[] = "$Date$";
-+static char SvnRawRevisionDate[] = "$Date: Thu Oct 22 14:26:32 2020 +0200 $";
++static char SvnRawRevisionDate[] = "$Date: Fri Nov 6 09:23:58 2020 +0100 $";
  # define DATE_START (SvnRawRevisionDate + 7)
  
 -static char SvnRawRepositoryURL[] = "$URL$";
@@ -22,11 +22,11 @@
  #elif GIT
  # define PREFIX ""
 -static char GitRawRevisionString[] = "$Rev$";
-+static char GitRawRevisionString[] = "$Rev: 202010221226-cog $";
++static char GitRawRevisionString[] = "$Rev: 202011060823-cog $";
  # define REV_START (GitRawRevisionString + 6)
  
 -static char GitRawRevisionDate[] = "$Date$";
-+static char GitRawRevisionDate[] = "$Date: Thu Oct 22 14:26:32 2020 +0200 $";
++static char GitRawRevisionDate[] = "$Date: Fri Nov 6 09:23:58 2020 +0100 $";
  # define DATE_START (GitRawRevisionDate + 7)
  
 -static char GitRawRepositoryURL[] = "$URL$";
@@ -34,7 +34,7 @@
  # define URL_START (GitRawRepositoryURL + 6)
  
 -static char GitRawRevisionShortHash[] = "$CommitHash$";
-+static char GitRawRevisionShortHash[] = "$CommitHash: 329b81c50 $";
++static char GitRawRevisionShortHash[] = "$CommitHash: 081d92ea9 $";
  # define SHORTHASH_START (GitRawRevisionShortHash + 13)
  
  static char *
