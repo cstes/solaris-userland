@@ -32,19 +32,18 @@ COMPILER=studio
 include ../../make-rules/shared-macros.mk
 
 COMPONENT_NAME=		squeak-4
-COMPONENT_VERSION=	4.16.7
+COMPONENT_VERSION=	4.19.2
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
-# we use a local archive file "squeak4-3775.tar.gz" to avoid subversion
-# this file was created by "svn export" of the svn revision 3775 files
+# we use a local archive file "squeak4-<rev>.tar.gz" to avoid subversion
+# this file was created by "svn export" of the svn revision <rev> files
 # SVN_REPO=		http://squeakvm.org/svn/squeak/trunk/
-# SVN_HASH=  sha256:17f565a44201dd41aa7ae65861577c76c72097bbdae8d5a2f96c5aee1e321b63
-# I believe that solaris-userland allows SVN_REPO checkout but couldn't get it to work ..
-SVN_REV=		3775
+# but couldn't get it to work ... (and no other components seem to use it)
+SVN_REV=		3790
 
 COMPONENT_SRC=		squeak4-$(SVN_REV)
 COMPONENT_ARCHIVE=	squeak4-$(SVN_REV).tar.gz
-COMPONENT_ARCHIVE_HASH= sha256:2578aa4cffb3f583a29ae68769ea16a4589ab8650f1b66ce18865584c1682a96
+COMPONENT_ARCHIVE_HASH= sha256:a6057ae3f4ae4087f08a29e90a8f597e7b6afa5eab1da01ebf7c3d699853de4f
 COMPONENT_ARCHIVE_URL=  https://downloads.sourceforge.net/project/solaris-squeak/$(COMPONENT_ARCHIVE)
 
 TEST_TARGET= $(NO_TESTS)

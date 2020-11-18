@@ -1,58 +1,73 @@
 #
-# This file and its contents are supplied under the terms of the
-# Common Development and Distribution License ("CDDL"), version 1.0.
-# You may only use this file in accordance with the terms of version
-# 1.0 of the CDDL.
+# CDDL HEADER START
 #
-# A full copy of the text of the CDDL should have accompanied this
-# source.  A copy of the CDDL is also available via the Internet at
-# http://www.illumos.org/license/CDDL.
+# The contents of this file are subject to the terms of the
+# Common Development and Distribution License (the "License").
+# You may not use this file except in compliance with the License.
+#
+# You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+# or http://www.opensolaris.org/os/licensing.
+# See the License for the specific language governing permissions
+# and limitations under the License.
+#
+# When distributing Covered Code, include this CDDL HEADER in each
+# file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+# If applicable, add the following below this CDDL HEADER, with the
+# fields enclosed by brackets "[]" replaced with your own identifying
+# information: Portions Copyright [yyyy] [name of copyright owner]
+#
+# CDDL HEADER END
 #
 
 #
-# Copyright 2020 <contributor>
+# Copyright (c) 2017, Oracle and/or its affiliates. All rights reserved.
 #
 
-set name=pkg.fmri value=pkg:/$(COMPONENT_FMRI)@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
-set name=pkg.summary value="$(COMPONENT_SUMMARY)"
-set name=info.classification value="$(COMPONENT_CLASSIFICATION)"
-set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
+set name=pkg.fmri \
+    value=pkg:/$(IPS_PKG_NAME)@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="XXX Summary XXX"
+set name=com.oracle.info.description value="XXX Description XXX"
+set name=com.oracle.info.tpno value=$(TPNO)
+set name=info.classification \
+    value="org.opensolaris.category.2008:XXX Classification XXX"
 set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
+set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
+set name=org.opensolaris.arc-caseid value=PSARC/YYYY/XXX
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
 
-license $(COMPONENT_LICENSE_FILE) license='$(COMPONENT_LICENSE)'
+license $(COPYRIGHT_FILE) license='$(COPYRIGHTS)'
 
+dir  path=mangled
 file path=usr/bin/squeak
 file path=usr/bin/squeak.sh
-file path=usr/bin/squeak4
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/ckformat
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.AioPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.B3DAcceleratorPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.ClipboardExtendedPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.DBusPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.FT2Plugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.FileCopyPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.GStreamerPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.HostWindowPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.ImmX11Plugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.KedamaPlugin2
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.Mpeg3Plugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.RomePlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.ScratchPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.Squeak3D
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.SqueakFFIPrims
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.SqueakSSL
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.UUIDPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.UnicodePlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.UnixOSProcessPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.XDisplayControlPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.vm-display-X11
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.vm-display-custom
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.vm-display-null
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.vm-sound-custom
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.vm-sound-null
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/so.vm-sound-pulse
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3775/squeakvm
-file path=usr/share/doc/squeak-$(COMPONENT_VERSION)-3775/LICENSE
+dir  path=usr/lib/squeak
+dir  path=usr/lib/squeak/$(COMPONENT_VERSION)-3790
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/ckformat
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.AioPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.B3DAcceleratorPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.ClipboardExtendedPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.DBusPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.FT2Plugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.FileCopyPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.HostWindowPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.ImmX11Plugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.KedamaPlugin2
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.Mpeg3Plugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.RomePlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.ScratchPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.Squeak3D
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.SqueakFFIPrims
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.SqueakSSL
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.UUIDPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.UnicodePlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.UnixOSProcessPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.XDisplayControlPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-display-X11
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-display-custom
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-display-null
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-sound-Sun
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-sound-custom
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-sound-null
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-sound-pulse
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/squeakvm
 file path=usr/share/man/man1/squeak.1
-file path=usr/share/man/man1/squeak4.1
