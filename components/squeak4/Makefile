@@ -35,16 +35,9 @@ COMPONENT_NAME=		squeak-4
 COMPONENT_VERSION=	4.19.2
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
-# we use a local archive file "squeak4-<rev>.tar.gz" to avoid subversion
-# this file was created by "svn export" of the svn revision <rev> files
-# SVN_REPO=		http://squeakvm.org/svn/squeak/trunk/
-# but couldn't get it to work ... (and no other components seem to use it)
+SVN_REPO=		http://squeakvm.org/svn/squeak/trunk/
 SVN_REV=		3790
-
-COMPONENT_SRC=		squeak4-$(SVN_REV)
-COMPONENT_ARCHIVE=	squeak4-$(SVN_REV).tar.gz
-COMPONENT_ARCHIVE_HASH= sha256:a6057ae3f4ae4087f08a29e90a8f597e7b6afa5eab1da01ebf7c3d699853de4f
-COMPONENT_ARCHIVE_URL=  https://downloads.sourceforge.net/project/solaris-squeak/$(COMPONENT_ARCHIVE)
+SVN_HASH=		sha256:8ee3b156d7e3f1c3f98c40198510daf4cd20c2010f56a3ba39ac3766c6c9da29
 
 TEST_TARGET= $(NO_TESTS)
 
