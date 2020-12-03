@@ -26,12 +26,12 @@ license squeak4.license license=Squeak4
 
 # the minimal installation consists of the squeak-4-nodisplay package
 # which can run "headless" squeak -nodisplay images
-# with only minimal installation requirements
+# with only minimal installation requirements (only ksh, libc, math)
 
-depend type=require fmri=runtime/squeak-4-nodisplay
+depend type=group fmri=runtime/squeak-4-nodisplay@$(IPS_COMPONENT_VERSION)
 
 # each plugin could be in its own IPS package for finetuning
-# the plugins depend on X11, pulse, mesa, pango etc.
+# the plugins depend on X11, SSL, libffi, pulse, mesa, cairo, pango etc.
 
-depend type=require fmri=runtime/squeak-4-plugins
+depend type=group fmri=runtime/squeak-4-plugins@$(IPS_COMPONENT_VERSION)
 
