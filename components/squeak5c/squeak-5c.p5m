@@ -27,6 +27,9 @@ set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
 hardlink path=usr/bin/ckformat target=ckformat5c mediator=squeak \
     mediator-implementation=cog-spur mediator-version=5
 file usr/bin/ckformat path=usr/bin/ckformat5c
+hardlink path=usr/bin/inisqueak target=inisqueak5c mediator=squeak \
+    mediator-implementation=cog-spur mediator-version=5
+file inisqueak5c path=usr/bin/inisqueak5c
 
 # for the sound plugins, we only package vm-sound-pulse
 # we do not package vm-sound-OSS and vm-sound-Sun
@@ -39,10 +42,7 @@ file usr/bin/ckformat path=usr/bin/ckformat5c
 
 hardlink path=usr/bin/squeak target=squeak5c mediator=squeak \
     mediator-implementation=cog-spur mediator-version=5
-hardlink path=usr/bin/inisqueak target=inisqueak5c mediator=squeak \
-    mediator-implementation=cog-spur mediator-version=5
 file usr/bin/squeak path=usr/bin/squeak5c
-file inisqueak5c path=usr/bin/inisqueak5c
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/B3DAcceleratorPlugin.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/DESPlugin.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/FileAttributesPlugin.so
