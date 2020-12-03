@@ -23,6 +23,9 @@ set name=info.classification \
 set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2011/092
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
+hardlink path=usr/bin/inisqueak target=inisqueak4 mediator=squeak \
+    mediator-version=4
+file inisqueak4 path=usr/bin/inisqueak4
 
 #
 # do not use a symlink - script uses test -L and has problem with symlink
