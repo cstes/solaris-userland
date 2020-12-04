@@ -25,6 +25,9 @@ COMPILER=studio
 
 include ../../make-rules/shared-macros.mk
 
+# the component version 5.0.<n refers to the VMMaker.oscog-eem.<n>
+# Smalltalk sources of the opensmalltalk-vm package
+
 COMPONENT_NAME=		squeak-5
 COMPONENT_VERSION=	5.0.2885
 GIT_TAG=		sun-v5.0.21
