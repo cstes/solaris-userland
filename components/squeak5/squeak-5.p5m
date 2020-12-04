@@ -52,7 +52,6 @@ file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/XDisplayControlPlugin.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/squeak mode=0555
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/vm-display-X11.so
 file path=usr/lib/$(MACH64)/squeak/$(PLUGIN_REV)/vm-sound-pulse.so
-
 license squeak.license license=MIT
 license squeak5.license license=Squeak5
 
