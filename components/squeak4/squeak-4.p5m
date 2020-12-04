@@ -50,8 +50,6 @@ file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-display-custom
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-sound-custom
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-sound-pulse
 license squeak.license license=MIT
-license squeak.license license=MIT
-license squeak4.license license=Squeak4
 license squeak4.license license=Squeak4
 
 # the minimal installation consists of the squeak-4-nodisplay package
