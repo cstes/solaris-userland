@@ -31,6 +31,9 @@ COMPILER=studio
 
 include ../../make-rules/shared-macros.mk
 
+# the version is the same as the VMMaker Smalltalk sources
+# it cannot be changed here randomly, it must match the VMMaker version
+
 COMPONENT_NAME=		squeak-4
 COMPONENT_VERSION=	4.19.2
 COMPONENT_PROJECT_URL=	http://www.squeak.org
@@ -60,15 +63,15 @@ REQUIRED_PACKAGES += x11/library/mesa
 REQUIRED_PACKAGES += system/library/dbus
 
 # Auto-generated dependencies
-REQUIRED_PACKAGES += SUNWcs
 REQUIRED_PACKAGES += library/audio/pulseaudio
 REQUIRED_PACKAGES += library/desktop/cairo
 REQUIRED_PACKAGES += library/desktop/pango
 REQUIRED_PACKAGES += library/glib2
 REQUIRED_PACKAGES += library/libffi
-REQUIRED_PACKAGES += library/security/openssl
+REQUIRED_PACKAGES += shell/ksh93
 REQUIRED_PACKAGES += system/library
 REQUIRED_PACKAGES += system/library/freetype-2
+REQUIRED_PACKAGES += system/library/libc
 REQUIRED_PACKAGES += system/library/libdbus
 REQUIRED_PACKAGES += system/library/math
 REQUIRED_PACKAGES += x11/library/libx11
