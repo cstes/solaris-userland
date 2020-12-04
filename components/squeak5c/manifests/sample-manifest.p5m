@@ -70,6 +70,6 @@ file path=usr/lib/$(MACH64)/squeak/5.0-202011201128-cog/vm-sound-OSS.so
 file path=usr/lib/$(MACH64)/squeak/5.0-202011201128-cog/vm-sound-Sun.so
 file path=usr/lib/$(MACH64)/squeak/5.0-202011201128-cog/vm-sound-null.so
 file path=usr/lib/$(MACH64)/squeak/5.0-202011201128-cog/vm-sound-pulse.so
-hardlink path=usr/share/man/man1/inisqueak.1 target=squeak.1
-file path=usr/share/man/man1/squeak.1
+file path=usr/share/man/man1/inisqueak.1
+hardlink path=usr/share/man/man1/squeak.1 target=inisqueak.1
 file path=usr/squeak
