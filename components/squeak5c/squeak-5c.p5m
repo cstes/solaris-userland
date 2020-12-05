@@ -61,5 +61,5 @@ license squeak5.license license=Squeak5
 # which can run "headless" squeak -nodisplay images
 # with only minimal installation requirements (only ksh, libc, math)
 
-depend type=require fmri=runtime/squeak-5c-nodisplay@$(IPS_COMPONENT_VERSION)
+depend type=require fmri=pkg:/runtime/squeak-5c-nodisplay@$(IPS_COMPONENT_VERSION)
 
