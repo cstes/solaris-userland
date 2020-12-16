@@ -39,8 +39,9 @@ COMPONENT_VERSION=	4.19.2
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 SVN_REPO=		http://squeakvm.org/svn/squeak/trunk/
-SVN_REV=		3790
-SVN_HASH=		sha256:8ee3b156d7e3f1c3f98c40198510daf4cd20c2010f56a3ba39ac3766c6c9da29
+SVN_REV=		3791
+SVN_HASH=		sha256:eb28b6ed2edd416efcaffa543e307addb12befd2f6444ca2f5b4c5304f9b7f0f
+
 
 TEST_TARGET= $(NO_TESTS)
 

@@ -31,10 +31,10 @@ file inisqueak4 path=usr/bin/inisqueak4
 
 hardlink path=usr/bin/squeak target=squeak4 mediator=squeak mediator-version=4
 file usr/bin/squeak path=usr/bin/squeak4
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/ckformat mode=0555
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-display-null
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/so.vm-sound-null
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3790/squeakvm mode=0555
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3791/ckformat mode=0555
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3791/so.vm-display-null
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3791/so.vm-sound-null
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-3791/squeakvm mode=0555
 hardlink path=usr/share/man/man1/squeak.1 target=squeak4.1 mediator=squeak \
     mediator-version=4
 file usr/share/man/man1/squeak.1 path=usr/share/man/man1/squeak4.1
