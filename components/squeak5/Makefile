@@ -29,14 +29,14 @@ include ../../make-rules/shared-macros.mk
 # Smalltalk sources of the opensmalltalk-vm package
 
 COMPONENT_NAME=		squeak-5
-COMPONENT_VERSION=	5.0.2885
-GIT_TAG=		sun-v5.0.21
-PLUGIN_REV=		5.0-202011201128
+COMPONENT_VERSION=	5.0.2908
+GIT_TAG=		sun-v5.0.23
+PLUGIN_REV=		5.0-202012230929
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 COMPONENT_SRC=		opensmalltalk-vm-$(GIT_TAG)
 COMPONENT_ARCHIVE=	$(COMPONENT_SRC).tar.gz
-COMPONENT_ARCHIVE_HASH= sha256:44426bb268bc4a251ff12b5b393a7de11f774396ab94b67e81b8455eceb9c5d2
+COMPONENT_ARCHIVE_HASH= sha256:bd2c370117c72d03f2ee44c78d9f33be90b86a5177f2897c453520be5da952bc
 
 COMPONENT_ARCHIVE_URL=	https://codeload.github.com/cstes/opensmalltalk-vm/tar.gz/$(GIT_TAG)
 
