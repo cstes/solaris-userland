@@ -30,7 +30,7 @@ COMPILER=gcc
 
 include ../../make-rules/shared-macros.mk
 
-COMPONENT_NAME=		gnu-st
+COMPONENT_NAME=		gnu-smalltalk
 COMPONENT_VERSION=	3.2.91
 COMPONENT_SUMMARY=	GNU Smalltalk
 COMPONENT_PROJECT_URL=	http://smalltalk.gnu.org
