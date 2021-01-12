@@ -9,7 +9,7 @@
 #
 
 #
-# Copyright 2020 David Stes
+# Copyright 2020,2021 David Stes
 #
 
 
@@ -35,16 +35,18 @@ include ../../make-rules/shared-macros.mk
 # it cannot be changed here randomly, it must match the VMMaker version
 
 COMPONENT_NAME=		squeak-4
-COMPONENT_VERSION=	4.19.3
+COMPONENT_VERSION=	4.19.5
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 SVN_REPO=		http://squeakvm.org/svn/squeak/trunk/
-SVN_REV=		3792
-SVN_HASH=		sha256:c2723650dcf57c0571f0b34687eed3a010033d9be2c655439eeaa08da3b9e9c8
+SVN_REV=		3793
+SVN_HASH=		sha256:751107c9f24f44d51344de421e258cd5b64e962191285924a85feec975800e2a
 
 TEST_TARGET= $(NO_TESTS)
 
 include $(WS_MAKE_RULES)/common.mk
+
+PKG_OPTIONS += -DSVN_REV="$(SVN_REV)"
 
 # squeak4 configure looks for .svn or svnversion file, but
 # prep-svn.mk did a svn export and created an unversioned copy of the sources

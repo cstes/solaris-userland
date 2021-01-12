@@ -10,7 +10,7 @@
 #
 
 #
-# Copyright 2020 David Stes
+# Copyright 2020,2021 David Stes
 #
 
 
@@ -26,29 +26,29 @@ set name=info.classification \
 set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2011/092
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.AioPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.B3DAcceleratorPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.ClipboardExtendedPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.DBusPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.FT2Plugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.FileCopyPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.HostWindowPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.ImmX11Plugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.KedamaPlugin2
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.Mpeg3Plugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.RomePlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.ScratchPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.Squeak3D
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.SqueakFFIPrims
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.SqueakSSL
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.UUIDPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.UnicodePlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.UnixOSProcessPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.XDisplayControlPlugin
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.vm-display-X11
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.vm-display-custom
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.vm-sound-custom
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-3792/so.vm-sound-pulse
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.AioPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.B3DAcceleratorPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.ClipboardExtendedPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.DBusPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.FT2Plugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.FileCopyPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.HostWindowPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.ImmX11Plugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.KedamaPlugin2
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.Mpeg3Plugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.RomePlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.ScratchPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.Squeak3D
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.SqueakFFIPrims
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.SqueakSSL
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.UUIDPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.UnicodePlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.UnixOSProcessPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.XDisplayControlPlugin
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.vm-display-X11
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.vm-display-custom
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.vm-sound-custom
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.vm-sound-pulse
 license squeak.license license=MIT
 license squeak4.license license=Squeak4
 
