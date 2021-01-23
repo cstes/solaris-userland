@@ -9,13 +9,20 @@
 #
 
 #
-# Copyright 2020 David Stes
+# Copyright 2020, 2021 David Stes
 # 
 
 #
-# Package Makefile for "GNU Smalltalk" or "gnu-st" (gst)
+# Package Makefile for "GNU Smalltalk" or "gst"
 #
 # see http://smalltalk.gnu.org for more info
+#
+# also "The Smalltalk Report" June 1992 Vol I Number 8 issue by Steve Byrne
+# which discusses the use of Emacs as a Smalltalk class browser
+# we build GNU smalltalk with emacs support, but split the package into
+# core components and everything else, so that gnu-smalltalk-core can be
+# installed without Emacs or without GTK (GNOME) support
+# the VisualGST or gst-browser requires gtk2
 #
 
 # gst can be built 64-bit but seems to have an issue
@@ -32,6 +39,7 @@ include ../../make-rules/shared-macros.mk
 
 COMPONENT_NAME=		gnu-smalltalk
 COMPONENT_VERSION=	3.2.91
+COMPONENT_REVISION=	1
 COMPONENT_SUMMARY=	GNU Smalltalk
 COMPONENT_PROJECT_URL=	http://smalltalk.gnu.org
 
@@ -46,10 +54,11 @@ TEST_TARGET= $(NO_TESTS)
 
 include $(WS_MAKE_RULES)/common.mk
 
-CFLAGS +=		-I/usr/include/gmp
+CPPFLAGS +=		-I/usr/include/gmp
 
-CONFIGURE_OPTIONS +=    --without-emacs
+CONFIGURE_OPTIONS +=    --with-emacs
 CONFIGURE_OPTIONS +=    --with-gmp
+CONFIGURE_OPTIONS +=    --with-lispdir=/usr/share/emacs/site-lisp
 
 # the libtool from gst is not working with /usr/bin/nm
 CONFIGURE_ENV +=	NM='/usr/gnu/bin/nm'
