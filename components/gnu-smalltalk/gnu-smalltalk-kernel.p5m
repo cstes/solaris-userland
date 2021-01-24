@@ -14,11 +14,9 @@
 #
 
 
-<transform file -> add pkg.depend.bypass-generate libGL\.so\.1>
-<transform file -> add pkg.depend.bypass-generate libGLU\.so>
 set name=pkg.fmri \
-    value=pkg:/runtime/gnu-st@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
-set name=pkg.summary value="GNU Smalltalk"
+    value=pkg:/runtime/gnu-smalltalk-kernel@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="GNU Smalltalk Kernel"
 set name=info.classification \
     value="org.opensolaris.category.2008:Development/Other Languages"
 set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
@@ -26,8 +24,6 @@ set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2016/518
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
 file path=usr/bin/gst
-hardlink path=usr/bin/gst-blox target=gst-remote
-hardlink path=usr/bin/gst-browser target=gst-remote
 file path=usr/bin/gst-config
 hardlink path=usr/bin/gst-convert target=gst-remote
 hardlink path=usr/bin/gst-doc target=gst-remote
@@ -40,40 +36,10 @@ hardlink path=usr/bin/gst-sunit target=gst-remote
 file path=usr/include/gst-gobject.h
 file path=usr/include/gst.h
 file path=usr/include/gstpub.h
-link path=usr/lib/libgst-gobject.so target=libgst-gobject.so.1.0.0
-link path=usr/lib/libgst-gobject.so.1 target=libgst-gobject.so.1.0.0
-file path=usr/lib/libgst-gobject.so.1.0.0
 link path=usr/lib/libgst.so target=libgst.so.7.1.3
 link path=usr/lib/libgst.so.7 target=libgst.so.7.1.3
 file path=usr/lib/libgst.so.7.1.3
-file path=usr/lib/pkgconfig/gnu-smalltalk.pc
-file path=usr/lib/smalltalk/blox-tk-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/blox-tk.so target=blox-tk-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/dbd-sqlite3-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/dbd-sqlite3.so \
-    target=dbd-sqlite3-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/digest-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/digest.so target=digest-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/expat-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/expat.so target=expat-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/gdbm-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/gdbm.so target=gdbm-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/gst-glib-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/gst-glib.so target=gst-glib-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/gst-gtk-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/gst-gtk.so target=gst-gtk-$(COMPONENT_VERSION).so
 file path=usr/lib/smalltalk/gst.im
-file path=usr/lib/smalltalk/gstglut-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/gstglut.so target=gstglut-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/gstopengl-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/gstopengl.so \
-    target=gstopengl-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/i18n-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/i18n.so target=i18n-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/iconv-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/iconv.so target=iconv-$(COMPONENT_VERSION).so
-file path=usr/lib/smalltalk/zlib-$(COMPONENT_VERSION).so
-link path=usr/lib/smalltalk/zlib.so target=zlib-$(COMPONENT_VERSION).so
 file path=usr/libexec/smalltalk/gnutls-wrapper
 file path=usr/libexec/smalltalk/vfs/deb
 file path=usr/libexec/smalltalk/vfs/lslR
@@ -86,17 +52,6 @@ file path=usr/libexec/smalltalk/vfs/urar
 file path=usr/libexec/smalltalk/vfs/utar
 file path=usr/libexec/smalltalk/vfs/uzip
 file path=usr/libexec/smalltalk/vfs/uzoo
-file path=usr/share/aclocal/gst-package.m4
-file path=usr/share/aclocal/gst.m4
-dir  path=usr/share/emacs
-dir  path=usr/share/emacs/site-lisp
-file path=usr/share/emacs/site-lisp/gst-mode.el
-file path=usr/share/emacs/site-lisp/gst-mode.elc
-file path=usr/share/emacs/site-lisp/smalltalk-mode.el
-file path=usr/share/emacs/site-lisp/smalltalk-mode.elc
-# avoid site-start.d directory and put the init files in site-lisp
-file usr/share/emacs/site-lisp/site-start.d/smalltalk-mode-init.el path=usr/share/emacs/site-lisp/smalltalk-mode-init.el
-file usr/share/emacs/site-lisp/site-start.d/smalltalk-mode-init.elc path=usr/share/emacs/site-lisp/smalltalk-mode-init.elc
 file path=usr/share/info/gst-base.info
 file path=usr/share/info/gst-base.info-1
 file path=usr/share/info/gst-base.info-2
@@ -118,100 +73,6 @@ file path=usr/share/man/man1/gst-profile.1
 link path=usr/share/man/man1/gst-reload.1 target=gst-load.1
 file path=usr/share/man/man1/gst-sunit.1
 file path=usr/share/man/man1/gst.1
-file path=usr/share/smalltalk/Announcements.star
-file path=usr/share/smalltalk/BLOXBrowser.star
-file path=usr/share/smalltalk/Blox.star
-file path=usr/share/smalltalk/BloxGTK.star
-file path=usr/share/smalltalk/BloxTK.star
-file path=usr/share/smalltalk/CParser.star
-file path=usr/share/smalltalk/Cairo.star
-file path=usr/share/smalltalk/ClassPublisher.star
-file path=usr/share/smalltalk/Compiler.star
-file path=usr/share/smalltalk/Complex.star
-file path=usr/share/smalltalk/Continuations.star
-file path=usr/share/smalltalk/DBD-MySQL.star
-file path=usr/share/smalltalk/DBD-SQLite.star
-file path=usr/share/smalltalk/DBI.star
-file path=usr/share/smalltalk/DebugTools.star
-file path=usr/share/smalltalk/Debugger.star
-file path=usr/share/smalltalk/DhbNumericalMethods.star
-file path=usr/share/smalltalk/Digest.star
-file path=usr/share/smalltalk/GDBM.star
-file path=usr/share/smalltalk/GLUT.star
-file path=usr/share/smalltalk/GLib.star
-file path=usr/share/smalltalk/GNUPlot.star
-file path=usr/share/smalltalk/GObject-Introspection.star
-file path=usr/share/smalltalk/GTK.star
-file path=usr/share/smalltalk/Glorp.star
-file path=usr/share/smalltalk/I18N.star
-file path=usr/share/smalltalk/Iconv.star
-file path=usr/share/smalltalk/Java.star
-file path=usr/share/smalltalk/Kernel-Tests.star
-file path=usr/share/smalltalk/Magritte-Seaside.star
-file path=usr/share/smalltalk/Magritte.star
-file path=usr/share/smalltalk/NCurses.star
-file path=usr/share/smalltalk/NetClients.star
-file path=usr/share/smalltalk/ObjectDumper.star
-file path=usr/share/smalltalk/OpenGL.star
-file path=usr/share/smalltalk/Parser.star
-file path=usr/share/smalltalk/ProfileTools.star
-file path=usr/share/smalltalk/ROE.star
-file path=usr/share/smalltalk/STTools.star
-file path=usr/share/smalltalk/SUnit.star
-file path=usr/share/smalltalk/SandstoneDb.star
-file path=usr/share/smalltalk/Seaside-Core.star
-file path=usr/share/smalltalk/Seaside-Development.star
-file path=usr/share/smalltalk/Seaside-Examples.star
-file path=usr/share/smalltalk/Seaside.star
-file path=usr/share/smalltalk/Sockets.star
-file path=usr/share/smalltalk/Sport.star
-file path=usr/share/smalltalk/Swazoo.star
-file path=usr/share/smalltalk/VFSAddOns.star
-file path=usr/share/smalltalk/VisualGST.star
-file path=usr/share/smalltalk/WebServer.star
-file path=usr/share/smalltalk/XML-DOM.star
-file path=usr/share/smalltalk/XML-Expat.star
-file path=usr/share/smalltalk/XML-ParserTests.star
-file path=usr/share/smalltalk/XML-PullParser.star
-file path=usr/share/smalltalk/XML-SAXDriver.star
-file path=usr/share/smalltalk/XML-SAXParser.star
-file path=usr/share/smalltalk/XML-XMLNodeBuilder.star
-file path=usr/share/smalltalk/XML-XMLParser.star
-file path=usr/share/smalltalk/XPath.star
-file path=usr/share/smalltalk/XSL.star
-file path=usr/share/smalltalk/ZLib.star
-file path=usr/share/smalltalk/examples/Bench.st
-file path=usr/share/smalltalk/examples/CairoBlit.st
-file path=usr/share/smalltalk/examples/CairoDemo.st
-file path=usr/share/smalltalk/examples/Case.st
-file path=usr/share/smalltalk/examples/DeltaBlue.st
-file path=usr/share/smalltalk/examples/Dinner.st
-file path=usr/share/smalltalk/examples/EditStream.st
-file path=usr/share/smalltalk/examples/Gen2.st
-file path=usr/share/smalltalk/examples/Gen3.st
-file path=usr/share/smalltalk/examples/GenClasses.st
-file path=usr/share/smalltalk/examples/JSON.st
-file path=usr/share/smalltalk/examples/LazyCollection.st
-file path=usr/share/smalltalk/examples/Lisp.st
-file path=usr/share/smalltalk/examples/Man.st
-file path=usr/share/smalltalk/examples/MemUsage.st
-file path=usr/share/smalltalk/examples/Methods.st
-file path=usr/share/smalltalk/examples/PipeStream.st
-file path=usr/share/smalltalk/examples/Prolog.st
-file path=usr/share/smalltalk/examples/PrtHier.st
-file path=usr/share/smalltalk/examples/Queens.st
-file path=usr/share/smalltalk/examples/README
-file path=usr/share/smalltalk/examples/RegExp.st
-file path=usr/share/smalltalk/examples/Richards.st
-file path=usr/share/smalltalk/examples/SortCriter.st
-file path=usr/share/smalltalk/examples/Sync.st
-file path=usr/share/smalltalk/examples/Tetris.st
-file path=usr/share/smalltalk/examples/Timer.st
-file path=usr/share/smalltalk/examples/TokenStream.st
-file path=usr/share/smalltalk/examples/Tokenizer.st
-file path=usr/share/smalltalk/examples/pepe.sed
-file path=usr/share/smalltalk/examples/shell
-file path=usr/share/smalltalk/examples/xml.sed
 file path=usr/share/smalltalk/kernel/AbstNamespc.st
 file path=usr/share/smalltalk/kernel/AnsiDates.st
 file path=usr/share/smalltalk/kernel/Array.st
@@ -335,25 +196,4 @@ file path=usr/share/smalltalk/kernel/ValueAdapt.st
 file path=usr/share/smalltalk/kernel/VarBinding.st
 file path=usr/share/smalltalk/kernel/WeakObjects.st
 file path=usr/share/smalltalk/kernel/WriteStream.st
-file path=usr/share/smalltalk/packages.xml
-file path=usr/share/smalltalk/scripts/Convert.st
-file path=usr/share/smalltalk/scripts/GenDoc.st
-file path=usr/share/smalltalk/scripts/Load.st
-file path=usr/share/smalltalk/scripts/Package.st
-file path=usr/share/smalltalk/scripts/Profile.st
-file path=usr/share/smalltalk/scripts/Remote.st
-file path=usr/share/smalltalk/scripts/Test.st
-file path=usr/share/smalltalk/unsupported/CPP-test.st
-file path=usr/share/smalltalk/unsupported/CParseType-test.st
-file path=usr/share/smalltalk/unsupported/CString.st
-file path=usr/share/smalltalk/unsupported/DLD.st
-file path=usr/share/smalltalk/unsupported/Interr.st
-file path=usr/share/smalltalk/unsupported/Process.st
-file path=usr/share/smalltalk/unsupported/Profile.st
-file path=usr/share/smalltalk/unsupported/Sorting.st
-file path=usr/share/smalltalk/unsupported/echo.st
-file path=usr/share/smalltalk/unsupported/market.st
-file path=usr/share/smalltalk/unsupported/resolve.st
-file path=usr/share/smalltalk/unsupported/t.st
-file path=usr/share/smalltalk/unsupported/torture.st
 license COPYING license=GPLv2

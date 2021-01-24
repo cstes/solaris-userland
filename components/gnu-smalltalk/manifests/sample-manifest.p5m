@@ -39,17 +39,17 @@ license $(COPYRIGHT_FILE) license='$(COPYRIGHTS)'
 
 dir  path=mangled
 file path=usr/bin/gst
-hardlink path=usr/bin/gst-blox target=gst-profile
-hardlink path=usr/bin/gst-browser target=gst-profile
+hardlink path=usr/bin/gst-blox target=gst-sunit
+hardlink path=usr/bin/gst-browser target=gst-sunit
 file path=usr/bin/gst-config
-hardlink path=usr/bin/gst-convert target=gst-profile
-hardlink path=usr/bin/gst-doc target=gst-profile
-hardlink path=usr/bin/gst-load target=gst-profile
-hardlink path=usr/bin/gst-package target=gst-profile
-file path=usr/bin/gst-profile
-hardlink path=usr/bin/gst-reload target=gst-profile
-hardlink path=usr/bin/gst-remote target=gst-profile
-hardlink path=usr/bin/gst-sunit target=gst-profile
+hardlink path=usr/bin/gst-convert target=gst-sunit
+hardlink path=usr/bin/gst-doc target=gst-sunit
+hardlink path=usr/bin/gst-load target=gst-sunit
+hardlink path=usr/bin/gst-package target=gst-sunit
+hardlink path=usr/bin/gst-profile target=gst-sunit
+hardlink path=usr/bin/gst-reload target=gst-sunit
+hardlink path=usr/bin/gst-remote target=gst-sunit
+file path=usr/bin/gst-sunit
 file path=usr/include/gst-gobject.h
 file path=usr/include/gst.h
 file path=usr/include/gstpub.h
@@ -119,6 +119,15 @@ file path=usr/libexec/smalltalk/vfs/uzip
 file path=usr/libexec/smalltalk/vfs/uzoo
 file path=usr/share/aclocal/gst-package.m4
 file path=usr/share/aclocal/gst.m4
+dir  path=usr/share/emacs
+dir  path=usr/share/emacs/site-lisp
+file path=usr/share/emacs/site-lisp/gst-mode.el
+file path=usr/share/emacs/site-lisp/gst-mode.elc
+dir  path=usr/share/emacs/site-lisp/site-start.d
+file path=usr/share/emacs/site-lisp/site-start.d/smalltalk-mode-init.el
+file path=usr/share/emacs/site-lisp/site-start.d/smalltalk-mode-init.elc
+file path=usr/share/emacs/site-lisp/smalltalk-mode.el
+file path=usr/share/emacs/site-lisp/smalltalk-mode.elc
 dir  path=usr/share/info
 file path=usr/share/info/gst-base.info
 file path=usr/share/info/gst-base.info-1
@@ -139,7 +148,7 @@ file path=usr/share/man/man1/gst-load.1
 file path=usr/share/man/man1/gst-package.1
 file path=usr/share/man/man1/gst-profile.1
 link path=usr/share/man/man1/gst-reload.1 \
-    target=/scratch/clone/components/gnu-st/build/prototype/$(MACH)/usr/share/man/man1/gst-load.1
+    target=/scratch/clone/components/gnu-smalltalk/build/prototype/$(MACH)/usr/share/man/man1/gst-load.1
 file path=usr/share/man/man1/gst-sunit.1
 file path=usr/share/man/man1/gst.1
 dir  path=usr/share/smalltalk

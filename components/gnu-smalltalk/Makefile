@@ -17,9 +17,15 @@
 #
 # see http://smalltalk.gnu.org for more info
 #
-# also "The Smalltalk Report" June 1992 Vol I Number 8 issue by Steve Byrne
-# which discusses the use of Emacs as a Smalltalk class browser
-# we build GNU smalltalk with emacs support, but split the package into
+# original author of GNU Smalltalk was Steve Byrne (then at Sunsoft)
+#
+# "The Smalltalk Report" June 1992 Vol I Number 8 issue by Steve Byrne
+# discusses the use of Emacs as a Smalltalk class browser
+#
+# recent emacs (25+) has integrated Smalltalk support from ELPA
+# M-x package-install smalltalk-mode
+#
+# but we still build the package with Emacs support, and split it into
 # core components and everything else, so that gnu-smalltalk-core can be
 # installed without Emacs or without GTK (GNOME) support
 # the VisualGST or gst-browser requires gtk2
@@ -54,13 +60,19 @@ TEST_TARGET= $(NO_TESTS)
 
 include $(WS_MAKE_RULES)/common.mk
 
+# GNU smalltalk is unable to find the GMP header files so add to CPPFLAGS
+# the GNU smalltalk configure script looks for ${lispdir}/site-start.d
+# but that directory is not delivered by the Solaris gnu-emacs package
+# setting lispstartdir does not help because it seems ignored when crosscompile
+
 CPPFLAGS +=		-I/usr/include/gmp
 
-CONFIGURE_OPTIONS +=    --with-emacs
 CONFIGURE_OPTIONS +=    --with-gmp
+CONFIGURE_OPTIONS +=    --with-emacs
 CONFIGURE_OPTIONS +=    --with-lispdir=/usr/share/emacs/site-lisp
+# CONFIGURE_OPTIONS +=    --with-lispstartdir=/usr/share/emacs/site-lisp
 
-# the libtool from gst is not working with /usr/bin/nm
+# the libtool from gst is not working with Solaris /usr/bin/nm
 CONFIGURE_ENV +=	NM='/usr/gnu/bin/nm'
 CONFIGURE_ENV +=	MAKE='/usr/bin/gmake'
 
@@ -69,6 +81,8 @@ COMPONENT_INSTALL_TARGETS=	install-strip
 
 # Build dependencies
 REQUIRED_PACKAGES += text/texinfo
+REQUIRED_PACKAGES += editor/gnu-emacs
+REQUIRED_PACKAGES += build/automake
 REQUIRED_PACKAGES += x11/library/mesa
 
 # Auto-generated contents below.
@@ -91,3 +105,4 @@ REQUIRED_PACKAGES += system/library
 REQUIRED_PACKAGES += system/library/libc
 REQUIRED_PACKAGES += system/library/math
 REQUIRED_PACKAGES += x11/library/freeglut
+
