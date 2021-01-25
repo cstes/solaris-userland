@@ -25,14 +25,14 @@ set name=org.opensolaris.arc-caseid value=PSARC/2016/518
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
 file path=usr/bin/gst
 file path=usr/bin/gst-config
-hardlink path=usr/bin/gst-convert target=gst-remote
-hardlink path=usr/bin/gst-doc target=gst-remote
-hardlink path=usr/bin/gst-load target=gst-remote
-hardlink path=usr/bin/gst-package target=gst-remote
-hardlink path=usr/bin/gst-profile target=gst-remote
-hardlink path=usr/bin/gst-reload target=gst-remote
-file path=usr/bin/gst-remote
-hardlink path=usr/bin/gst-sunit target=gst-remote
+hardlink path=usr/bin/gst-convert target=gst-sunit
+hardlink path=usr/bin/gst-doc target=gst-sunit
+hardlink path=usr/bin/gst-load target=gst-sunit
+hardlink path=usr/bin/gst-package target=gst-sunit
+hardlink path=usr/bin/gst-profile target=gst-sunit
+hardlink path=usr/bin/gst-reload target=gst-sunit
+hardlink path=usr/bin/gst-remote target=gst-sunit
+file path=usr/bin/gst-sunit
 file path=usr/include/gst-gobject.h
 file path=usr/include/gst.h
 file path=usr/include/gstpub.h
@@ -196,4 +196,11 @@ file path=usr/share/smalltalk/kernel/ValueAdapt.st
 file path=usr/share/smalltalk/kernel/VarBinding.st
 file path=usr/share/smalltalk/kernel/WeakObjects.st
 file path=usr/share/smalltalk/kernel/WriteStream.st
+file path=usr/share/smalltalk/scripts/Convert.st
+file path=usr/share/smalltalk/scripts/GenDoc.st
+file path=usr/share/smalltalk/scripts/Load.st
+file path=usr/share/smalltalk/scripts/Package.st
+file path=usr/share/smalltalk/scripts/Profile.st
+file path=usr/share/smalltalk/scripts/Remote.st
+file path=usr/share/smalltalk/scripts/Test.st
 license COPYING license=GPLv2

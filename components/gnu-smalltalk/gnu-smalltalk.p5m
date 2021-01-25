@@ -24,8 +24,8 @@ set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
 set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2016/518
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
-hardlink path=usr/bin/gst-blox target=gst-remote
-hardlink path=usr/bin/gst-browser target=gst-remote
+hardlink path=usr/bin/gst-blox target=gst-sunit
+hardlink path=usr/bin/gst-browser target=gst-sunit
 link path=usr/lib/libgst-gobject.so target=libgst-gobject.so.1.0.0
 link path=usr/lib/libgst-gobject.so.1 target=libgst-gobject.so.1.0.0
 file path=usr/lib/libgst-gobject.so.1.0.0
@@ -58,17 +58,6 @@ file path=usr/lib/smalltalk/zlib-$(COMPONENT_VERSION).so
 link path=usr/lib/smalltalk/zlib.so target=zlib-$(COMPONENT_VERSION).so
 file path=usr/share/aclocal/gst-package.m4
 file path=usr/share/aclocal/gst.m4
-dir  path=usr/share/emacs
-dir  path=usr/share/emacs/site-lisp
-file path=usr/share/emacs/site-lisp/gst-mode.el
-file path=usr/share/emacs/site-lisp/gst-mode.elc
-# avoid site-start.d directory and put the init files in site-lisp
-file usr/share/emacs/site-lisp/site-start.d/smalltalk-mode-init.el \
-    path=usr/share/emacs/site-lisp/smalltalk-mode-init.el
-file usr/share/emacs/site-lisp/site-start.d/smalltalk-mode-init.elc \
-    path=usr/share/emacs/site-lisp/smalltalk-mode-init.elc
-file path=usr/share/emacs/site-lisp/smalltalk-mode.el
-file path=usr/share/emacs/site-lisp/smalltalk-mode.elc
 file path=usr/share/smalltalk/Announcements.star
 file path=usr/share/smalltalk/BLOXBrowser.star
 file path=usr/share/smalltalk/Blox.star
@@ -164,13 +153,6 @@ file path=usr/share/smalltalk/examples/pepe.sed
 file path=usr/share/smalltalk/examples/shell
 file path=usr/share/smalltalk/examples/xml.sed
 file path=usr/share/smalltalk/packages.xml
-file path=usr/share/smalltalk/scripts/Convert.st
-file path=usr/share/smalltalk/scripts/GenDoc.st
-file path=usr/share/smalltalk/scripts/Load.st
-file path=usr/share/smalltalk/scripts/Package.st
-file path=usr/share/smalltalk/scripts/Profile.st
-file path=usr/share/smalltalk/scripts/Remote.st
-file path=usr/share/smalltalk/scripts/Test.st
 file path=usr/share/smalltalk/unsupported/CPP-test.st
 file path=usr/share/smalltalk/unsupported/CParseType-test.st
 file path=usr/share/smalltalk/unsupported/CString.st
@@ -185,9 +167,3 @@ file path=usr/share/smalltalk/unsupported/resolve.st
 file path=usr/share/smalltalk/unsupported/t.st
 file path=usr/share/smalltalk/unsupported/torture.st
 license COPYING license=GPLv2
-
-# the minimal installation consists of the gnu-smalltalk-kernel package
-# with only minimal installation requirements (only ksh, libc, math)
-# solaris-userland discovers the dependency on gnu-smalltalk-kernel by itself
-# depend type=require #    fmri=pkg:/runtime/gnu-smalltalk-kernel@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
-
