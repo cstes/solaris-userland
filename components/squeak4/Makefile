@@ -26,10 +26,12 @@
 # it launches the squeak virtual machine 32bit or 64bit for the image
 #
 # for 32-bit : ckformat reports 6505
-# 6505: a 32-bit V3 image with closure support and float words stored in native platform order
+# 6505: a 32-bit V3 image with closure support and float words stored 
+# in native platform order
 #
 # for 64-bit : ckformat reports 68000
-# 68000: a 64-bit V3 image with no closure support and no native platform float word order requirement
+# 68000: a 64-bit V3 image with no closure support and 
+# no native platform float word order requirement
 #
 # squeak4 places its 64-bit shared object files in
 # usr/lib/squeak/<version>-<svnversion>_64bit/  with a _64bit suffix
@@ -38,7 +40,7 @@
 #
 # it is possible to disable pkglint (PKGLINTVAR=/bin/true) and build
 # the squeak4 package "as-is", but we deliver a patch and rename files
-# in order to put the 64-bit objects in their usual place
+# in order to put the 64-bit objects in their usual place to please pkglint
 #
 
 BUILD_BITS=32_and_64
@@ -54,8 +56,8 @@ COMPONENT_VERSION=	4.19.5
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 SVN_REPO=		http://squeakvm.org/svn/squeak/trunk/
-SVN_REV=		3796
-SVN_HASH=		sha256:2ffc935a0c0b672757edc5a84d091ad8b54c2b9be97e04e9f5876044b64a2fe9
+SVN_REV=		3797
+SVN_HASH=		sha256:a8c4e89262a73ec37ddea1307a779525aac8097f0201a585fc3b0217322beb81
 
 TEST_TARGET= $(NO_TESTS)
 
