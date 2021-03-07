@@ -79,6 +79,22 @@ CONFIGURE_ENV +=	MAKE='/usr/bin/gmake'
 # the default seems to install non-stripped
 COMPONENT_INSTALL_TARGETS=	install-strip
 
+# 
+# target to rebuild Manifests - normally not necessary
+#
+
+rebuild-manifests::
+	cp manifests/gnu-smalltalk-emacs.p5m gnu-smalltalk-emacs.p5m
+	cp manifests/gnu-smalltalk.p5m gnu-smalltalk.p5m
+	cp manifests/gnu-smalltalk-kernel.p5m gnu-smalltalk-kernel.p5m
+	cp manifests/sample-manifest.p5m sample-manifest.p5m
+	pkgfmt -u sample-manifest.p5m
+	tools/classify.pl < sample-manifest.p5m
+	pkgfmt gnu-smalltalk-emacs.p5m
+	pkgfmt gnu-smalltalk.p5m
+	pkgfmt gnu-smalltalk-kernel.p5m
+	rm -f sample-manifest.p5m
+
 # Build dependencies
 REQUIRED_PACKAGES += text/texinfo
 REQUIRED_PACKAGES += editor/gnu-emacs
