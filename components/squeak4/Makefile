@@ -82,6 +82,25 @@ CONFIGURE_OPTIONS.64+=	--vm-only
 COMPONENT_POST_INSTALL_ACTION = \
 ( find $(PROTOUSRLIBDIR)/squeak -name 'squeakvm*' -exec strip {} \; )
 
+#
+# target to update the manifests from sample-manifest 
+# tools/subversion.pl must be updated first manually for new SVN_REV
+#
+
+rebuild-manifests::
+	cp manifests/squeak-4.p5m squeak-4.p5m
+	cp manifests/squeak-4-display-X11.p5m squeak-4-display-X11.p5m
+	cp manifests/squeak-4-nodisplay.p5m squeak-4-nodisplay.p5m
+	cp manifests/sample-manifest.p5m sample-manifest.p5m
+	pkgfmt -u sample-manifest.p5m
+	tools/subversion.pl < sample-manifest.p5m > sample.p5m
+	tools/classify.pl sample.p5m
+	tools/amd64-p5m.sh
+	pkgfmt squeak-4.p5m
+	pkgfmt squeak-4-display-X11.p5m
+	pkgfmt squeak-4-nodisplay.p5m
+	rm -f sample-manifest.p5m sample.p5m
+
 REQUIRED_PACKAGES += developer/build/cmake
 REQUIRED_PACKAGES += developer/build/pkg-config
 REQUIRED_PACKAGES += x11/library/mesa
