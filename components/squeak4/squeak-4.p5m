@@ -24,8 +24,6 @@ set name=info.classification \
 set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2011/092
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
-file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.B3DAcceleratorPlugin \
-    path=usr/lib/amd64/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.B3DAcceleratorPlugin
 file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.DBusPlugin \
     path=usr/lib/amd64/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.DBusPlugin
 file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.FT2Plugin \
@@ -52,7 +50,6 @@ file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.vm-sound-custom \
     path=usr/lib/amd64/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.vm-sound-custom
 file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.vm-sound-pulse \
     path=usr/lib/amd64/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.vm-sound-pulse
-file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.B3DAcceleratorPlugin
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.DBusPlugin
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.FT2Plugin
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.KedamaPlugin2

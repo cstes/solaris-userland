@@ -60,6 +60,8 @@ while (<>) {
 			print X11 $_;
 		} elsif (/Squeak3D/) {
 			print X11 $_;
+		} elsif (/B3DAcceleratorPlugin/) {
+			print X11 $_;
 		} elsif (/UnixOSProcessPlugin/) {
 			print NODISPLAY $_;
 		} elsif (/XDisplayControlPlugin/) {

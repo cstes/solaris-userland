@@ -22,6 +22,8 @@ set name=info.classification \
 set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2011/092
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
+file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.B3DAcceleratorPlugin \
+    path=usr/lib/amd64/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.B3DAcceleratorPlugin
 file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.ClipboardExtendedPlugin \
     path=usr/lib/amd64/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.ClipboardExtendedPlugin
 file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.HostWindowPlugin \
@@ -34,6 +36,7 @@ file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.XDisplayControlPlug
     path=usr/lib/amd64/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.XDisplayControlPlugin
 file usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)_64bit/so.vm-display-X11 \
     path=usr/lib/amd64/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.vm-display-X11
+file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.B3DAcceleratorPlugin
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.ClipboardExtendedPlugin
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.HostWindowPlugin
 file path=usr/lib/squeak/$(COMPONENT_VERSION)-$(SVN_REV)/so.ImmX11Plugin
