@@ -1,0 +1,11 @@
+--- smalltalk-3.2.91/main.c	2015-11-07 13:14:26.000000000 +0100
++++ p0/smalltalk-3.2.91/main.c	2021-03-26 08:41:18.440081330 +0100
+@@ -132,7 +132,7 @@
+   {"core-dump", 0, 0, 'c'},
+   {"declaration-trace", 0, 0, 'D'},
+   {"execution-trace", 0, 0, 'E'},
+-  {"file", 0, 0, 'f'},
++  {"file", 1, 0, 'f'},
+   {"kernel-directory", 1, 0, OPT_KERNEL_DIR},
+   {"no-user-files", 0, 0, OPT_NO_USER},
+   {"no-gc-message", 0, 0, 'g'},

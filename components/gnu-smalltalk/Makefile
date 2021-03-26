@@ -29,14 +29,12 @@
 # core components and everything else, so that gnu-smalltalk-core can be
 # installed without Emacs or without GTK (GNOME) support
 # the VisualGST or gst-browser requires gtk2
-#
 
-# gst can be built 64-bit but seems to have an issue
-# ../scripts/Package.st:31: Abort in 64-bit case
-# still under investigation (the gst itself works in 64bit)
-# a 32bit version makes most sense as GNU st uses 'int' (4 bytes) as object ID
-# gst requires a lot of GNU tools like gcc (compiles only with gcc), gawk ...
+# gst requires GNU tools like gcc (compiles only with gcc), gawk ...
 # also  libtool pkg-config must be installed for configure and build to work
+
+# gst can be built 64-bit but I think a 32bit version currently makes sense
+# GNU smalltalk uses 'int' (4 bytes) as object ID (also in 64bit case)
 
 BUILD_BITS=32
 COMPILER=gcc
@@ -45,7 +43,6 @@ include ../../make-rules/shared-macros.mk
 
 COMPONENT_NAME=		gnu-smalltalk
 COMPONENT_VERSION=	3.2.91
-COMPONENT_REVISION=	1
 COMPONENT_SUMMARY=	GNU Smalltalk
 COMPONENT_PROJECT_URL=	http://smalltalk.gnu.org
 
@@ -69,6 +66,8 @@ CPPFLAGS +=		-I/usr/include/gmp
 
 CONFIGURE_OPTIONS +=    --with-gmp
 CONFIGURE_OPTIONS +=    --with-emacs
+CONFIGURE_OPTIONS +=    --disable-generational-gc
+CONFIGURE_OPTIONS +=    --with-system-libsigsegv=no
 CONFIGURE_OPTIONS +=    --with-lispdir=/usr/share/emacs/site-lisp
 # CONFIGURE_OPTIONS +=    --with-lispstartdir=/usr/share/emacs/site-lisp
 
@@ -110,7 +109,6 @@ REQUIRED_PACKAGES += library/glib2
 REQUIRED_PACKAGES += library/gmp
 REQUIRED_PACKAGES += library/gnutls-3
 REQUIRED_PACKAGES += library/libffi
-REQUIRED_PACKAGES += library/libsigsegv
 REQUIRED_PACKAGES += library/libtool/libltdl
 REQUIRED_PACKAGES += library/readline
 REQUIRED_PACKAGES += library/zlib
