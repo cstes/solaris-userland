@@ -9,34 +9,40 @@
 #
 
 #
-# Copyright 2020 David Stes
+# Copyright 2020,2021 David Stes
 #
 
-
 #
-# Package Makefile for the "OpenSmalltalk Stack Spur" Squeak Smalltalk V5 system
+# Package Makefile for the "OpenSmalltalk Cog Spur" Squeak Smalltalk V5 system
 # See http://squeak.org and http://opensmalltalk.org
 #
 
 # opensmalltalk-vm can be built both in 32 and 64bit
-# but generally SqueakV5 images are 64bit
-BUILD_BITS=64
+# but unfortunately it does not deliver a driver script (like squeak-4 does)
+#
+# we deliver our own script squeak.ips as driver script
+#
+# the driver script checks (with ckformat) the Smalltalk image
+# image format 6521  : start VM 32bit 
+# image format 68021 : start VM 64bit
+BUILD_BITS=32_and_64
 COMPILER=studio
 
 include ../../make-rules/shared-macros.mk
 
-# the component version 5.0.<n> refers to the VMMaker.oscog-eem.<n>
-# Smalltalk sources of the opensmalltalk-vm package
+# there is no official triplet version for opensmalltalk-vm
+# we use 5.0.<n> for VMMaker.oscog-eem.<n>
+# sometimes the Stack VM is generated from a different VMMaker as the Cog VM
 
 COMPONENT_NAME=		squeak-5
-COMPONENT_VERSION=	5.0.2908
-GIT_TAG=		sun-v5.0.23
-PLUGIN_REV=		5.0-202012230929
+COMPONENT_VERSION=	5.0.2948
+GIT_TAG=		sun-v5.0.27
+PLUGIN_REV=		5.0-202103291332
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 COMPONENT_SRC=		opensmalltalk-vm-$(GIT_TAG)
 COMPONENT_ARCHIVE=	$(COMPONENT_SRC).tar.gz
-COMPONENT_ARCHIVE_HASH= sha256:bd2c370117c72d03f2ee44c78d9f33be90b86a5177f2897c453520be5da952bc
+COMPONENT_ARCHIVE_HASH= sha256:84d22bfba6a9f1b9dfbc8d3be14343a7fb5cbe09bb9c6146900f61a7ba37b2f8
 
 COMPONENT_ARCHIVE_URL=	https://codeload.github.com/cstes/opensmalltalk-vm/tar.gz/$(GIT_TAG)
 
@@ -50,7 +56,17 @@ include $(WS_MAKE_RULES)/common.mk
 PKG_OPTIONS += -D PLUGIN_REV="$(PLUGIN_REV)"
 
 # opensmalltalk configure script checks for plugins files in builddir
-COMPONENT_PRE_CONFIGURE_ACTION = ( cp plugins.ext plugins.int $(BUILD_DIR_64) )
+COMPONENT_PRE_CONFIGURE_ACTION = ( \
+	$(MKDIR) $(BUILD_DIR_32); \
+	cp plugins.ext plugins.int $(BUILD_DIR_32); \
+	$(MKDIR) $(BUILD_DIR_64); \
+	cp plugins.ext plugins.int $(BUILD_DIR_64) \
+	)
+
+# the Squeak configure script detects the lfcompile flags
+# but unfortunately I think some files do not #include "config.h"
+# we have to make sure largefile support is enabled in the 32bit case
+CPPFLAGS += $(CPP_LARGEFILES)
 
 # the default CFLAGS.gcc will be -m64 -O3 but this does not work for us
 # opensmalltalk code is not compatible with the gcc optimizer -O2 or higher
@@ -64,12 +80,15 @@ CONFIGURE_SCRIPT= $(SOURCE_DIR)/platforms/unix/config/configure
 CONFIGURE_OPTIONS +=	--with-vmversion=5.0
 CONFIGURE_OPTIONS +=	--disable-dynamicopenssl
 CONFIGURE_OPTIONS +=	--without-libtls
-CONFIGURE_OPTIONS +=	--with-src=spurstack64src
+CONFIGURE_OPTIONS.32 +=	--with-src=spurstacksrc
+CONFIGURE_OPTIONS.64 +=	--with-src=spurstack64src
 CONFIGURE_OPTIONS +=	--disable-cogit
 CONFIGURE_OPTIONS +=	--without-vm-display-fbdev
 CONFIGURE_OPTIONS +=	--without-npsqueak
 
-CONFIGURE_ENV +=	TARGET_ARCH="-m64"
+CONFIGURE_ENV    +=     CPPFLAGS="$(CPPFLAGS)"
+CONFIGURE_ENV.32 +=	TARGET_ARCH="-m32"
+CONFIGURE_ENV.64 +=	TARGET_ARCH="-m64"
 
 # the opensmalltalk Makefile does not use DESTDIR
 COMPONENT_INSTALL_ARGS=  	ROOT=$(PROTO_DIR)
@@ -79,7 +98,27 @@ COMPONENT_INSTALL_TARGETS= 	install-squeak install-doc install-plugins\
 
 # Makefile has no strip target
 COMPONENT_POST_INSTALL_ACTION = \
-( strip $(PROTOUSRLIBDIR64)/squeak/$(PLUGIN_REV)/squeak )
+( find $(PROTOUSRLIBDIR) -name 'squeak' -type f -exec strip {} \; )
+
+#
+# target to update the manifests from sample-manifest
+#
+
+rebuild-manifests::
+	cp manifests/squeak-5.p5m squeak-5.p5m
+	pkgfmt -u squeak-5.p5m
+	cp manifests/squeak-5-display-X11.p5m squeak-5-display-X11.p5m
+	pkgfmt -u squeak-5-display-X11.p5m
+	cp manifests/squeak-5-nodisplay.p5m squeak-5-nodisplay.p5m
+	pkgfmt -u squeak-5-nodisplay.p5m
+	cp manifests/sample-manifest.p5m sample-manifest.p5m
+	pkgfmt -u sample-manifest.p5m
+	tools/pluginrev.sh $(PLUGIN_REV) <sample-manifest.p5m >sample.p5m
+	tools/classify.pl <sample.p5m
+	pkgfmt squeak-5.p5m
+	pkgfmt squeak-5-display-X11.p5m
+	pkgfmt squeak-5-nodisplay.p5m
+	rm -f sample-manifest.p5m sample.p5m
 
 REQUIRED_PACKAGES += developer/build/pkg-config
 REQUIRED_PACKAGES += x11/library/mesa
@@ -87,7 +126,6 @@ REQUIRED_PACKAGES += system/library/dbus
 REQUIRED_PACKAGES += library/audio/gstreamer
 REQUIRED_PACKAGES += library/libffi
 REQUIRED_PACKAGES += system/library/freetype-2
-REQUIRED_PACKAGES += x11/library/libxext
 REQUIRED_PACKAGES += x11/library/libxevie
 
 # Auto-generated contents below.
@@ -98,4 +136,5 @@ REQUIRED_PACKAGES += system/library
 REQUIRED_PACKAGES += system/library/libc
 REQUIRED_PACKAGES += system/library/math
 REQUIRED_PACKAGES += x11/library/libx11
+REQUIRED_PACKAGES += x11/library/libxext
 REQUIRED_PACKAGES += x11/library/libxrender
