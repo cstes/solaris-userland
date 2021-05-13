@@ -12,12 +12,15 @@
 #
 # Copyright 2020, 2021 David Stes
 #
+# the Emacs files are probably obsolete, according to Derek Zhou
+# recent emacs (25+) has integrated Smalltalk support from ELPA
+# M-x package-install smalltalk-mode
+# is said to have pretty-print (left-arrow) and an "indentation engine rewrite"
+#
 
-<transform file -> add pkg.depend.bypass-generate libGL\.so\.1>
-<transform file -> add pkg.depend.bypass-generate libGLU\.so>
 set name=pkg.fmri \
-    value=pkg:/runtime/gnu-smalltalk@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
-set name=pkg.summary value="GNU Smalltalk"
+    value=pkg:/runtime/smalltalk/gnu-smalltalk-emacs@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="GNU Smalltalk Emacs"
 set name=info.classification \
     value="org.opensolaris.category.2008:Development/Other Languages"
 set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)

@@ -12,25 +12,17 @@
 #
 # Copyright 2020, 2021 David Stes
 #
-# the Emacs files are probably obsolete, according to Derek Zhou
-# recent emacs (25+) has integrated Smalltalk support from ELPA
-# M-x package-install smalltalk-mode
-# is said to have pretty-print (left-arrow) and an "indentation engine rewrite"
-#
 
+<transform file -> add pkg.depend.bypass-generate libGL\.so\.1>
+<transform file -> add pkg.depend.bypass-generate libGLU\.so>
 set name=pkg.fmri \
-    value=pkg:/runtime/gnu-smalltalk-emacs@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
-set name=pkg.summary value="GNU Smalltalk Emacs"
+    value=pkg:/runtime/smalltalk/gnu-smalltalk@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="GNU Smalltalk"
 set name=info.classification \
     value="org.opensolaris.category.2008:Development/Other Languages"
 set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
 set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
 set name=org.opensolaris.arc-caseid value=PSARC/2016/518
 set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
-file path=usr/share/emacs/site-lisp/gst-mode.el
-file path=usr/share/emacs/site-lisp/gst-mode.elc
-file path=usr/share/emacs/site-lisp/site-start.d/smalltalk-mode-init.el
-file path=usr/share/emacs/site-lisp/site-start.d/smalltalk-mode-init.elc
-file path=usr/share/emacs/site-lisp/smalltalk-mode.el
-file path=usr/share/emacs/site-lisp/smalltalk-mode.elc
 license COPYING license=GPLv2
+
