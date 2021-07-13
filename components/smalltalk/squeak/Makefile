@@ -56,8 +56,8 @@ COMPONENT_VERSION=	4.19.6
 COMPONENT_PROJECT_URL=	http://www.squeak.org
 
 SVN_REPO=		http://squeakvm.org/svn/squeak/trunk/
-SVN_REV=		3801
-SVN_HASH=		sha256:8ae39a65af168616247be2ce37ef602a84443454abf7de9dc197393266335bce
+SVN_REV=		3806
+SVN_HASH=  sha256:9fe73dba6be931a971b7d61e6ed631ee5f39a94959b2066f4715899e623eef59
 
 TEST_TARGET= $(NO_TESTS)
 
@@ -71,6 +71,8 @@ COMPONENT_PRE_CONFIGURE_ACTION = ( echo $(SVN_REV) > $(SOURCE_DIR)/platforms/uni
 
 CONFIGURE_SCRIPT= $(SOURCE_DIR)/platforms/unix/cmake/configure
 CONFIGURE_OPTIONS+=	--src=$(SOURCE_DIR)/src
+# libjpeg error under investigation
+#CONFIGURE_OPTIONS+=	--link-shared-lib
 
 # in the 64bit case the vm is called squeakvm64 (not squeakvm)
 # the plugin directory under usr/lib/squeak has a _64bit suffix
